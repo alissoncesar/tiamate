@@ -4,12 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.js">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    spacing: {
+                        '34': '135px',
+                        '22': '83px',
+                    },
+                    fontSize: {
+                        'base': ['16px','19.2px'],
+                        '24-26': ['24px','26.11px'],
+                        '50-54': ['50px','54.4px'],
+                        '55-59': ['55px','59.84px']
+                    },
                     colors: {
                         'terracota': '#64221D',
                         'mostarda': '#F7AE1A',
@@ -33,7 +44,18 @@
 
     <main>
         <section id="banners">
-
+            <img class="w-full" src="img/Banner_01index.png" alt="banner">
+            <div class="absolute top-28 left-40">
+                <h1 class="text-55-59 font-bold text-mostarda">Um café quentinho</h1> 
+                <h1 class="text-55-59 font-bold text-nude">aqui na Tiamate
+                <br>muda o dia.</h1>
+            </div>
+            <div class="flex gap-10 absolute top-80 left-40">
+                <img src="img.logo/Group.png" alt="">
+                <img src="img.logo/Vector.png" alt="">
+                <img src="img.logo/youtube.png" alt="">
+                <img src="img.logo/linkedin.png" alt="">
+            </div>
         </section>
         <section id="bem-vindo" class= "flex bg-cinza-claro">
 
@@ -49,10 +71,47 @@
              <p class="text-base font-normal text-marron-escuro">Pensamos em fazer os seus momentos mais felizes, seja no café da manhã ou em uma reunião.Individualmente ou entre amigos. À Tiamate Coffee investe em um conceito atual que transmite as pessoas uma sensação de bem estar. Enquanto nosso café aproxima as pessoas, nossos serviços de Wifi gratuito as mantém conectadas. Descubra como navegar na internet enquanto você saboreia um Tiamate.</p>
 
         </section>
-        <section id="valores">
+        <section id="valores" class="pt-40">
+            <div class="flex justify-center gap-52">
+                <div>
+                    <div class="flex items-center gap-5 pb-5">
+                        <img src="img.logo/logotia.png" alt="logotia">
+                        <h3 class="font-bold text-24-26 text-marron-claro">Missão</h3>
+                    </div>
+                    <div class="text-base text-marron-escuro">
+                        <p>Fornecer soluções, produtos e serviços
+                            <br>de maneira clara e objetiva construindo <br>relacionamentos duradouros com a <br>comunidade, parceiros, colaboradores
+                            <br>e sócios, através da criação de valores.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-5 pb-5">
+                        <img src="img.logo/coffee.png" alt="coffee">
+                        <h3 class="font-bold text-24-26 text-marron-claro">Visão</h3>
+                    </div>
+                    <div class="text-base text-marron-escuro">
+                        <p>Ser referência em inovação e estimular <br>exponencialmente a nossa gestão de <br>maneira diversificada, próspera e justa. <br>Com devoção e disciplina em todas as <br>nossas operações de negócio.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-5 pb-5">
+                        <img src="img.logo/value.png" alt="value">
+                        <h3 class="font-bold text-24-26 text-marron-claro">Valores</h3>
+                    </div>
+                    <div class="text-base text-marron-escuro">
+                        <p>Amor ao Trabalho - Organização - <br>Disciplina - Inovação - Busca Contínua <br>Pela Qualidade - Foco no Cliente
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="video-cafe">
-
+        <section id="video-cafe" class="pt-36 pl-34">
+            <h2 class="font-bold text-50-54 text-marron-claro pb-22 ">Coisas boas acontecem àqueles
+                <br>que gostam de café</h2>
+                <video id="myVideo" width="1168" height="600" controls="false" poster="img/video.png">
+                    <source src="video/tiamate-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
         </section>
         <section id="banner-secundario">
 

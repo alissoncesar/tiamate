@@ -11,6 +11,7 @@ module.exports = {
             'marron-claro': '#A97744',
             'nude': '#F5E7DA',
             'cinza-claro': '#F1F0EA',
+            'cinza': '#E7E1DF',
           }
       },
     },

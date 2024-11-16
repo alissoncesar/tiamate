@@ -8,6 +8,8 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: "Archivo", sans-serif;
+     /* outline: 1px solid red;  */
+   
 }
 
 .cardapio-carrossel .slider .item{

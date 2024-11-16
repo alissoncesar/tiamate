@@ -53,27 +53,33 @@
 		<header></header>
 
 		<main class="">
-			<section id="banners">
-				<img class="w-full" src="img/Banner_01index.png" alt="banner" />
-				<div class="absolute top-28 left-40">
-					<h1 class="text-55-59 font-bold text-mostarda">Um café quentinho</h1>
-					<h1 class="text-55-59 font-bold text-nude">
+			<section id="banners" class="w-full">
+				<div class="relative">
+					<img
+						src="img/Banner_01index.png"
+						alt="banner"
+						class="w-full"
+					/>
+					<div class="absolute top-[10px] xl:top-[171px] xl:left-[135px]">
+						<h1 class="text-[5vw] leadind-[5vw] md:text-55-59 font-bold text-mostarda">Um café quentinho</h1>
+						<h1 class="text-[5vw] leading-[5vw] md:text-55-59 font-bold text-nude">
 						aqui na Tiamate <br />muda o dia.
-					</h1>
-				</div>
-				<div class="flex gap-10 absolute top-80 left-40">
-					<a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"
-						><img src="img.logo/Group.png" alt=""
-					/></a>
-					<a href="https://www.instagram.com/tiamatefortaleza/"
-						><img src="img.logo/Vector.png" alt=""
-					/></a>
-					<a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop"
-						><img src="img.logo/youtube.png" alt=""
-					/></a>
-					<a href="https://br.linkedin.com/company/tiamatecoffee"
-						><img src="img.logo/linkedin.png" alt=""
-					/></a>
+						</h1>
+					</div>
+					<div class="w-[30vw] flex gap-5 absolute top-[24vw]   xl:gap-10 xl:top-[360px] xl:left-[135px]">
+						<a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"  target="_blank"
+							><img src="img.logo/Group.png" alt=""  
+						/></a>
+						<a href="https://www.instagram.com/tiamatefortaleza/"  target="_blank"
+							><img src="img.logo/Vector.png" alt=""
+						/></a>
+						<a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop"  target="_blank"
+							><img src="img.logo/youtube.png" alt=""
+						/></a>
+						<a href="https://br.linkedin.com/company/tiamatecoffee"  target="_blank"
+							><img src="img.logo/linkedin.png" alt=""
+						/></a>
+					</div>
 				</div>
 			</section>
 			<section id="bem-vindo" class="flex bg-cinza-claro">
@@ -110,10 +116,10 @@
 					enquanto você saboreia um Tiamate.
 				</p>
 			</section>
-			<section id="valores" class="pt-40">
-				<div class="flex justify-center gap-52">
+			<section id="valores" class="pt-40 sm:px-[135px]">
+				<div class="flex flex-col gap-5 items-center md:flex-row md:gap-10 md:justify-between">
 					<div>
-						<div class="flex items-center gap-5 pb-5">
+						<div class="flex flex-col md:flex-row items-center gap-5 pb-5">
 							<img src="img.logo/logotia.png" alt="logotia" />
 							<h3 class="font-bold text-24-26 text-marron-claro">Missão</h3>
 						</div>
@@ -127,7 +133,7 @@
 						</div>
 					</div>
 					<div>
-						<div class="flex items-center gap-5 pb-5">
+						<div class="flex flex-col md:flex-row items-center gap-5 pb-5">
 							<img src="img.logo/coffee.png" alt="coffee" />
 							<h3 class="font-bold text-24-26 text-marron-claro">Visão</h3>
 						</div>
@@ -141,7 +147,7 @@
 						</div>
 					</div>
 					<div>
-						<div class="flex items-center gap-5 pb-5">
+						<div class="flex flex-col md:flex-row items-center gap-5 pb-5">
 							<img src="img.logo/value.png" alt="value" />
 							<h3 class="font-bold text-24-26 text-marron-claro">Valores</h3>
 						</div>
@@ -154,14 +160,13 @@
 					</div>
 				</div>
 			</section>
-			<section id="video-cafe" class="pt-36 pl-34">
+			<section id="video-cafe" class="pt-36 pb-36 sm:px-[135px]">
 				<h2 class="font-bold text-50-54 text-marron-claro pb-22">
 					Coisas boas acontecem àqueles <br />que gostam de café
 				</h2>
 				<video
+					class="w-full"
 					id="myVideo"
-					width="1168"
-					height="600"
 					controls="false"
 					poster="img/video.png"
 				>

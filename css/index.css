@@ -112,3 +112,22 @@
         font-size: 5em;
     }
 }
+
+/* .gallery {
+    display: flex;
+  }
+  
+  .main-image {
+    width: 70%;
+  }
+  
+  .thumbnails {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .thumbnail {
+    width: 100%;
+    cursor: pointer;
+  } */

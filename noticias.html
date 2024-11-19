@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="index.js" />
-		<title>Document</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<script src="index.js" defer></script>
+        <link rel="icon" href="img.logo/logotia.png">
+		<title>Notícias</title>
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
 			tailwind.config = {
@@ -34,13 +36,15 @@
 							"55-59": ["55px", "59.84px"],
 						},
 						colors: {
-							terracota: "#64221D",
-							mostarda: "#F7AE1A",
-							"preto-medio": "#292625",
-							"marron-escuro": "#3B2416",
-							"marron-claro": "#A97744",
-							nude: "#F5E7DA",
-							"cinza-claro": "#F1F0EA",
+							'terracota': '#64221D',  
+                            'mostarda': '#F7AE1A',
+                            'preto-medio': '#292625',
+                            'marron-escuro': '#3B2416',
+                            'marrom-nude' : '#C7794A',
+                            'marron-claro': '#A97744',
+                            'nude': '#F5E7DA',
+                            'cinza-claro': '#F1F0EA',
+                            'cinza': '#E7E1DF',
 						},
 					},
 				},
@@ -49,7 +53,23 @@
 		<link rel="stylesheet" href="css/index.css" />
 	</head>
 <body>
-    <header></header>
+    <header class="flex items-center justify-between px-[135px] h-[110px] bg-preto-medio">
+        <div>
+            <img src="img.logo/LogotiaHorizontal.png" alt="tiamatecoffee">
+        </div>
+        <div>
+            <ul class="flex justify-between gap-[45px] font-medium text-[18px] leading-[19.58px] text-nude">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="nosso-cafe.html">Nosso Café</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+            </ul>
+        </div>
+        <div class="flex items-center justify-center w-[220px] h-[52px] rounded-[5px] bg-marrom-nude text-marron-escuro">
+            <h4 class="font-semibold text-[18px] leading-[19.58px]"><a href="">Seja um Franqueado</a></h4>
+        </div>
+    </header>
     <main>
         <section id="banners-noticias">
             <div class="relative">
@@ -77,28 +97,57 @@
                 </div>
             </div>
         </section>
-        <section id="quem-somos">
-            <div>
-                <h4>Para os amantes de café</h4>
-                <h2>Quem somos</h2>
-                <h5>Com um modelo de negocio sólido e rentavel, a Tiamate se destaca entre<br>as melhores oportunidades de franquia pelas 4 razões que seguem:</h5>
-                <div>
+        <section id="quem-somos" class="flex items-center  pt-[81px] pb-[100px]">
+            <div class=" px-[135px]">
+                <h4 class="pb-[14px] text-[18px] leading-[19.58px] text-marron-escuro ">Para os amantes de café</h4>
+                <h2 class="pb-[34px] font-bold text-[50px] leading-[54.4px] text-marron-claro">Quem somos</h2>
+                <h5 class="pb-[47px] text-[16px] leading-[19.2px] text-marron-escuro ">Com um modelo de negocio sólido e rentavel, a Tiamate se destaca entre<br>as melhores oportunidades de franquia pelas 4 razões que seguem:</h5>
+                <div class="flex gap-[8px] items-center">
                     <img src="img.logo/coffee.png" alt="coffee">
-                    <h5>Universidade corporativa que auxilia na capacitação <br>operacional e desenvolvimento de habilidades gerenciais
+                    <h5 class="text-[16px] leading-[19.2px] text-marron-escuro ">Universidade corporativa que auxilia na capacitação <br>operacional e desenvolvimento de habilidades gerenciais
                     </h5>
                 </div>
-                <div>
-                    <img src="" alt="">
+                <div class="flex gap-[22px] pt-[60px]">
+                    <i class='bx bxs-left-arrow-circle text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer' ></i>
+                    <i class='bx bxs-right-arrow-circle text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer ' ></i>
                 </div>    
             </div>
             <div>
                 <img src="img/Rectangle 33.png" alt="tiamate coffee">
             </div>
         </section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section id="video-franqueado">
+            <video class="w-full " id="myVideo" controls="false" poster="img/ccapatura de tela video 2.png">
+				<source src="video/tiamate-video.mp4" type="video/mp4" />
+				Your browser does not support the video tag.
+			</video>
+        </section>
+        <section id="modelos-de-franquias" class="pt-[139px] pb-[164px] bg-cinza">
+            <div class="flex gap-[100px] px-[135px]">
+                <div>
+                    <img src="img/franquia 1.png" alt="logo tiamate coffe">
+                </div>
+                <div class="flex flex-col gap-[11px] items-center justify-center">
+                    <h3 class="text-[18px] leading-[19.58px] text-marron-escuro">A Tiamate oferece 2 modelos <br/>de franquia personalizados.</h3>
+                    <h2 class="font-bold text-[50px] leading-[54.4px] text-marron-claro">Escolha a Tiamate <br/>ideal para você</h2>
+                </div>
+                <div>
+                    <img src="img/franquia 2.png" alt="logo tiamate coffe">
+                </div>
+            </div>
+        </section>
+        <!-- <section id="galeria-tiamate-coffe">
+            <div class="gallery">
+                <img src="img/primeira galeria/galeria principal.png" alt="Imagem principal" class="main-image">
+                <div class="thumbnails">
+                  <img src="img/primeira galeria/primeira.png" alt="Miniatura 1" class="thumbnail">
+                  <img src="img/primeira galeria/segunda.png" alt="Miniatura 2" class="thumbnail">
+                  </div>
+              </div>
+        </section>
+        <section id="galeria-tiamate-coffe-to-go">
+
+        </section> -->
         <section></section>
         <section></section>
         <section></section>

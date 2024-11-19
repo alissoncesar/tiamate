@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.js" />
+		<title>Document</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						keyframes: {
+							autoRun: {
+								from: {
+									transform: 'perspective(1000px) rotateX(-16deg) rotateY(0deg)'
+								},
+								to:{
+									transform: 'perspective(1000px) rotateX(-16deg) rotateY(360deg)'
+								}
+							}
+						},
+						animation: {
+							spinLatte: 'autoRun 15s linear infinite'
+						},
+						spacing: {
+							34: "135px",
+							22: "83px",
+						},
+						fontSize: {
+							base: ["16px", "19.2px"],
+							"24-26": ["24px", "26.11px"],
+							"50-54": ["50px", "54.4px"],
+							"55-59": ["55px", "59.84px"],
+						},
+						colors: {
+							terracota: "#64221D",
+							mostarda: "#F7AE1A",
+							"preto-medio": "#292625",
+							"marron-escuro": "#3B2416",
+							"marron-claro": "#A97744",
+							nude: "#F5E7DA",
+							"cinza-claro": "#F1F0EA",
+						},
+					},
+				},
+			};
+		</script>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+<body>
+    <header></header>
+    <main>
+        <section id="banners-noticias">
+            <div class="relative">
+                <img
+                    src="img/Rectangle 1.png"
+                    alt="banner"
+                    class="w-full"
+                />
+                <div class="absolute top-[10px] xl:top-[171px] xl:right-[135px]">
+                    <h1 class="text-[5vw] leadind-[5vw] md:text-55-59 font-bold text-nude">Abra sua Franquia <br>Tiamate Coffee.</h1>
+                </div>
+                <div class="w-[30vw] flex gap-5 absolute top-[19vw]   xl:gap-10 xl:top-[320px] xl:right-[147px]">
+                    <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"  target="_blank"
+                        ><img src="img.logo/Group.png" alt=""  
+                    /></a>
+                    <a href="https://www.instagram.com/tiamatefortaleza/"  target="_blank"
+                        ><img src="img.logo/Vector.png" alt=""
+                    /></a>
+                    <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop"  target="_blank"
+                        ><img src="img.logo/youtube.png" alt=""
+                    /></a>
+                    <a href="https://br.linkedin.com/company/tiamatecoffee"  target="_blank"
+                        ><img src="img.logo/linkedin.png" alt=""
+                    /></a>
+                </div>
+            </div>
+        </section>
+        <section id="quem-somos">
+            <div>
+                <h4>Para os amantes de café</h4>
+                <h2>Quem somos</h2>
+                <h5>Com um modelo de negocio sólido e rentavel, a Tiamate se destaca entre<br>as melhores oportunidades de franquia pelas 4 razões que seguem:</h5>
+                <div>
+                    <img src="img.logo/coffee.png" alt="coffee">
+                    <h5>Universidade corporativa que auxilia na capacitação <br>operacional e desenvolvimento de habilidades gerenciais
+                    </h5>
+                </div>
+                <div>
+                    <img src="" alt="">
+                </div>    
+            </div>
+            <div>
+                <img src="img/Rectangle 33.png" alt="tiamate coffee">
+            </div>
+        </section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </main>
+    <footer class="bg-preto-medio text-nude px-6 lg:px-16 py-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Logo e Redes Sociais -->
+          <div class="flex flex-col items-center lg:items-start space-y-4">
+            <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 w-auto">
+            <p class="text-sm">Curta e Compartilhe</p>
+            <div class="flex space-x-4">
+
+                      <!-- Linha divisória -->
+        <div class="border-t border-mostarda mt-8"></div>  
+              <!-- Ícones de redes sociais -->
+              <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"><img src="img.logo/Group.png"
+                alt=""></a>
+        <a href="https://www.instagram.com/tiamatefortaleza/"><img src="img.logo/Vector.png" alt=""></a>
+        <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop"><img src="img.logo/youtube.png"
+                alt=""></a>
+        <a href="https://br.linkedin.com/company/tiamatecoffee"><img src="img.logo/linkedin.png" alt=""></a>
+            </div>
+          </div>
+   
+          <!-- Menu de Links -->
+          <div class="flex justify-center lg:justify-center space-x-6 lg:space-x-8 text-sm">
+            <a href="index.html" class="hover:text-gray-400">Início</a>
+            <a href="#" class="hover:text-gray-400">Nosso Café</a>
+            <a href="noticias.html" class="hover:text-gray-400">Notícias</a>
+            <a href="#" class="hover:text-gray-400">Contato</a>
+            <a href="#" class="hover:text-gray-400">Cardápio</a>
+            <a href="#" class="hover:text-gray-400">Franquia</a>
+          </div>
+      
+          <!-- Direitos Autorais -->
+          <div class="flex flex-col items-center lg:items-end space-y-4">
+            <p class="text-sm text-mostarda">
+              © 2024 Tiamate - Todos os Direitos Reservados.
+            </p>
+            <img src="img.logo/logogracom .png" alt="Logo do Grupo de Desenvolvimento" class="h-8 w-auto">
+          </div>
+        </div>
+    </footer>
+</body>
+</html>

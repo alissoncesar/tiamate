@@ -13,6 +13,7 @@ module.exports = {
             'nude': '#F5E7DA',
             'cinza-claro': '#F1F0EA',
             'cinza': '#E7E1DF',
+            'marrom-white': '#CF9A5A'
           }
       },
     },

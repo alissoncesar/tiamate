@@ -1,238 +1,312 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img.logo/logotia.png">
     <title>Nosso Café</title>
     <link rel="stylesheet" href="index.js">
     <script src="https://cdn.tailwindcss.com"></script>
-	<script>
-		tailwind.config = {
-			theme: {
-				extend: {
-					spacing: {
-						'34': '135px',
-						'22': '83px',
-					},
-					fontSize: {
-						'base': ['16px', '19.2px'],
-						'24-26': ['24px', '26.11px'],
-						'50-54': ['50px', '54.4px'],
-						'55-59': ['55px', '59.84px']
-					},
-					colors: {
-						'terracota': '#64221D',
-						'mostarda': '#F7AE1A',
-						'preto-medio': '#292625',
-						'marron-escuro': '#3B2416',
-						'marrom-nude' : '#C7794A',
-						'marron-claro': '#A97744',
-						'nude': '#F5E7DA',
-						'cinza-claro': '#F1F0EA',
-						'cinza': '#E7E1DF',
-						
-					}
-				}
-			}
-		}
-	</script>
-	<link rel="stylesheet" href="css/index.css">
-</head>
-<body>
-    <body class="h-dvh">
-        <header class="flex bg-preto-medio">
-            <img src="img.logo/LogotiaHorizontal.png" alt="logo tiamate">
-            <nav class="flex">
-                <ul class="flex text-nude">
-                    <li>Início</li>
-                    <li>Nosso Café</li>
-                    <li>Notícias</li>
-                    <li>Contato</li>
-                    <li>cardápio</li>
-                </ul>
-                <button type="submit" class="text-marrom-nude ">Seja um franqueado</button>
-            </nav>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    spacing: {
+                        '34': '135px',
+                        '22': '83px',
+                    },
+                    fontSize: {
+                        'base': ['16px', '19.2px'],
+                        '24-26': ['24px', '26.11px'],
+                        '50-54': ['50px', '54.4px'],
+                        '55-59': ['55px', '59.84px']
+                    },
+                    colors: {
+                        'terracota': '#64221D',
+                        'mostarda': '#F7AE1A',
+                        'preto-medio': '#292625',
+                        'marron-escuro': '#3B2416',
+                        'marrom-nude': '#C7794A',
+                        'marron-claro': '#A97744',
+                        'nude': '#F5E7DA',
+                        'cinza-claro': '#F1F0EA',
+                        'cinza': '#E7E1DF',
 
-        </header>
-    
-        <main>
-            <section id="banners" class="w-full">
-                <div class="relative">
-                    <img src="img.logo/banner 1-nossocafe.png" alt="banner" class="w-full" />
-                    <div class="absolute top-[10px] xl:top-[171px] xl:left-[135px]">
-                        <h1 class="text-[5vw] leadind-[5vw] md:text-55-59 font-bold text-nude">Mais que sabor, <br> sentimentos!</h1>
-                    </div>
-                    <div class="w-[30vw] flex gap-5 absolute top-[24vw]   xl:gap-10 xl:top-[360px] xl:left-[135px]">
-                        <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/" target="_blank"><img
-                                src="img.logo/Group.png" alt="" /></a>
-                        <a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png"
-                                alt="" /></a>
-                        <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop" target="_blank"><img
-                                src="img.logo/youtube.png" alt="" /></a>
-                        <a href="https://br.linkedin.com/company/tiamatecoffee" target="_blank"><img
-                                src="img.logo/linkedin.png" alt="" /></a>
-                    </div>
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="h-dvh">
+    <header class="flex items-center justify-between px-[135px] h-[110px] bg-preto-medio">
+        <img src="img.logo/LogotiaHorizontal.png" alt="tiamatecoffee" class="h-15 w-auto">
+        <nav class="flex justify-between gap-[45px] font-medium text-[18px] leading-[19.58px] text-nude">
+            <a href="index.html">Inicio</a>
+            <a href="nosso-cafe.html">Nosso Café</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="contato.html">Contato</a>
+            <a href="cardapio.html">Cardápio</a>
+          </nav>
+
+            <div class="m-8">
+                <a href="#cadastro-franquiado" class="bg-marrom-nude text-xl px-4 py-2 rounded hover:bg-marron-claro transition text-marron-escuro font-semibold text-[18px] leading-[19.58px]">Seja um Franqueado</a>
+            </div>
+
+    </header>
+
+    <main>
+        <section id="banners" class="w-full">
+            <div class="relative">
+                <img src="img.logo/banner 1-nossocafe.png" alt="banner" class="w-full" />
+                <div class="absolute top-[10px] xl:top-[171px] xl:left-[135px]">
+                    <h1 class="text-[5vw] leadind-[5vw] md:text-55-59 font-bold text-nude">Mais que sabor, <br>
+                        sentimentos!</h1>
                 </div>
-            </section>
-            
-            <section id="colheita">
-    
-            </section>
-            <section id="torragem">
-          
-            </section>
-            <section id="moagem">
-           
-            </section>
-    
-            <section id="classificação">
-             
-            </section>
-            <!--cadastro franquia -->
-            <section id="cadastro-franquiado" class="py-12 bg-marron-escuro">
-                <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
-                    <div class="grid grid-cols-1 lg:grid-cols-2  items-center">
-                        <!-- Lado esquerdo: Formulário -->
-                        <div class="text-nude p-8 rounded-lg shadow-md">
-                            <h2 class="text-marron-claro">Entre em contato</h2>
-                            <h1 class="text-3xl font-bold mb-4">Abra sua Franquia</h1>
-                            <p class="text-marron-claro text-sm mb-6">
-                                Preencha o formulário abaixo que entraremos em contato com você o mais rápido possível.
-                            </p>
-                            <form class="space-y-4">
-                                <div>
-                                    <label for="nome" class="block text-sm font-medium"></label>
-                                    <input type="text" id="nome" name="nome"
-                                        class="w-full mt-2 p-3 bg-nude text-marron-escuro rounded-md"
-                                        placeholder="Nome e Sobrenome"/>
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-sm font-medium"></label>
-                                    <input type="email" id="email" name="email"
-                                        class="w-full mt-2 p-3 bg-nude text-marron-escuro rounded-md"
-                                        placeholder="email@exemplo.com" />
-                                </div>
-                                <div>
-                                    <label for="telefone" class="block text-sm font-medium"></label>
-                                    <input type="text" id="telefone" name="telefone"
-                                        class="w-full mt-2 p-3 bg-nude text-marron-escuro rounded-md"
-                                        placeholder="Telefone com DDD" />
-                                </div>
-                                <button type="submit"
-                                    class="w-full py-3 bg-marrom-nude text-white font-bold rounded-md hover:bg-marron-claro transition">
-                                    Enviar Cadastro
-                                </button>
-                            </form>
-                        </div>
-    
-                        <!-- Lado direito: Imagem -->
-                        <div class="overflow-hidden shadow-md">
-                            <img src="img/banner franquia.png" alt="Imagem do Tiamate Coffee" class="w-full h-full object-cover"/>
-                        </div>
-                    </div>
-                </div>
-    
-            </section>
-    
-    
-            <section id="depoimentos" class="py-12">
-    
-                <div class="max-w-7xl mx-auto px-4">
-                    <div class="text-center mb-12">
-                        <h3 class="text-sm text-marron-escuro">Depoimentos</h3>
-                        <h1 class="text-3xl font-bold text-marron-claro">Tudo sobre Tiamate Coffee</h1>
-                    </div>
-                    <div class="absolute">
-                        <img src="img/sobreindex.png" alt="Homem entregando café" class=" w-auto h-80 object-cover">
-                    </div>
-                    <!-- depoimentos -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Depoimento 1 -->
-                        <div class="bg-cinza rounded-lg shadow-md p-6">
-                            <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
-                            <p class="text-marron-escuro text-sm mb-4">
-                                O café é realmente bom, e os salgados também (peça um croissant do açafrão). Já havia pedido
-                                antes via iFood mas ao resolver visitar uma unidade, a experiência foi ainda melhor. Ótimo
-                                lugar!
-                            </p>
-                            <div class="flex items-center space-x-3">
-                                <img src="img/depoimentos1index.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full">
-                                <span class="text-terracota font-medium text-sm">Kalil Sousa</span>
-                            </div>
-                        </div>
-    
-                        <!-- Depoimento 2 -->
-                        <div class="bg-cinza rounded-lg shadow-md p-6">
-                            <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
-                            <p class="text-marron-escuro text-sm mb-4">
-                                Excelente café no Centro da cidade. Vale a pena uma parada para quem estiver passando pela
-                                região.
-                            </p>
-                            <div class="flex items-center space-x-3">
-                                <img src="img/depoimentos2index.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full">
-                                <span class="text-terracota font-medium text-sm">Flávia Martins</span>
-                            </div>
-                        </div>
-    
-                        <!-- Depoimento 3 -->
-                        <div class="bg-cinza rounded-lg shadow-md p-6">
-                            <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
-                            <p class="text-marron-escuro text-sm mb-4">
-                                Ótimo lugar para descansar, café, cappuccino, chá, entre outros. Ambiente tranquilo no
-                                centro de Fortaleza!
-                            </p>
-                            <div class="flex items-center space-x-3">
-                                <img src="img/depoimentos3index.png" alt="Pessoa 3" class="w-10 h-10 rounded-full">
-                                <span class="text-terracota font-medium text-sm">Iohana Holanda</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-            </section>
-        </main>
-        <!-- footer -->
-        <footer class="bg-preto-medio text-nude px-6 lg:px-16 py-10">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Logo e Redes Sociais -->
-                <div class="flex flex-col items-center lg:items-start space-y-4">
-                    <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 w-auto">
-                    <p class="text-sm">Curta e Compartilhe</p>
-                    <div class="flex space-x-4">
-    
-                        <!-- Linha divisória -->
-                        <div class="border-t border-mostarda mt-8"></div>
-                        <!-- Ícones de redes sociais -->
-                        <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/" target="_blank"><img
-                                src="img.logo/Group.png" alt=""></a>
-                        <a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png"
-                                alt=""></a>
-                        <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop" target="_blank"><img
-                                src="img.logo/youtube.png" alt=""></a>
-                        <a href="https://br.linkedin.com/company/tiamatecoffee" target="_blank"><img
-                                src="img.logo/linkedin.png" alt=""></a>
-                    </div>
-                </div>
-    
-                <!-- Menu de Links -->
-                <div class="flex justify-center lg:justify-center space-x-6 lg:space-x-8 text-sm">
-                    <a href="index.html" class="hover:text-gray-400">Início</a>
-                    <a href="#" class="hover:text-gray-400">Nosso Café</a>
-                    <a href="#" class="hover:text-gray-400">Notícias</a>
-                    <a href="#" class="hover:text-gray-400">Contato</a>
-                    <a href="#" class="hover:text-gray-400">Cardápio</a>
-                    <a href="#" class="hover:text-gray-400">Franquia</a>
-                </div>
-    
-                <!-- Direitos Autorais -->
-                <div class="flex flex-col items-center lg:items-end space-y-4">
-                    <p class="text-sm text-mostarda">
-                        © 2024 Tiamate - Todos os Direitos Reservados.
-                    </p>
-                    <img src="img.logo/logogracom .png" alt="Logo do Grupo de Desenvolvimento" class="h-8 w-auto">
+                <div class="w-[30vw] flex gap-5 absolute top-[24vw]   xl:gap-10 xl:top-[360px] xl:left-[135px]">
+                    <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/" target="_blank"><img
+                            src="img.logo/Group.png" alt="" /></a>
+                    <a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png"
+                            alt="" /></a>
+                    <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop" target="_blank"><img
+                            src="img.logo/youtube.png" alt="" /></a>
+                    <a href="https://br.linkedin.com/company/tiamatecoffee" target="_blank"><img
+                            src="img.logo/linkedin.png" alt="" /></a>
                 </div>
             </div>
-        </footer>
-    
+        </section>
+
+        <section id="colheita"
+            class=" bg-white flex flex-col lg:flex-row items-center lg:items-start gap-8 px-6 lg:px-20 py-10">
+
+            <div class="lg:w-1/2">
+                <h1 class="text-3xl lg:text-4xl font-bold text-marron-claro mb-6">Colheita</h1>
+
+                <p class="text-base lg:text-lg text-marron-escuro">A colheita acontece quando a maioria dos frutos já
+                    estão maduros. Tudo começa com uma seleção
+                    criteriosa das sementes de café. Elas são escolhidas, plantadas e mantidas em viveiros especiais,
+                    que darão origem às mudas.</p>
+
+                <p class="text-base lg:text-lg text-marron-escuro">As plantinhas passam por diversas etapas de
+                    crescimento e quando alcançam de quatro a seis pares de
+                    folhas em seus galhos, são levadas para os solos que abrigarão o cafezal.</p>
+            </div>
+            <div class="lg:w-1/2">
+                <img src="img.nossocafe/cafe1.png" alt="mulher colhendo frutos de café">
+            </div>
+        </section>
+
+        <section id="torragem"
+            class=" bg-cinza-claro flex flex-col lg:flex-row items-center lg:items-start gap-8 px-6 lg:px-20 py-10">
+            <div class="lg:w-1/2">
+                <img src="img.nossocafe/cafe2.png" alt="grãos torrados em um recipiente">
+            </div>
+            <div class="lg:w-1/2">
+                <h1 class="text-3xl lg:text-4xl font-bold text-marron-claro mb-6">Torragem</h1>
+
+                <p class="text-base lg:text-lg text-marron-escuro">Este procedimento é todo controlado por operadores à
+                    distância. Quando o café alcança a temperatura de 140°C, acontecem interações entre as proteínas,
+                    gorduras e açúcares
+                    presentes nele.
+                </p>
+
+                <p class="text-base lg:text-lg text-marron-escuro">Cada café possui uma curva de torra, então, a
+                    temperatura
+                    e o tempo podem variar. Secos, os grãos descansam por três
+                    horas e perdem gás carbônico. Em seguida, estão prontos
+                    para serem pesados e armazenados.</p>
+            </div>
+        </section>
+
+        <section id="moagem"
+            class=" bg-white flex flex-col lg:flex-row items-center lg:items-start gap-8 px-6 lg:px-20 py-10">
+            <div class="lg:w-1/2">
+                <h1 class="text-3xl lg:text-4xl font-bold text-marron-claro mb-6">Moagem</h1>
+
+                <p class="text-base lg:text-lg text-marron-escuro">Ela é feita através da combinação de diversos tipos
+                    de café. Esta “mistura” varia de acordo com o perfil do consumidor, podendo ser um produto gourmet,
+                    que leva toques mais suaves; do tipo forte, que é mais amargo e menos ácido; ou até mesmo aromático,
+                    que conta com sabores adicionais. </p>
+
+                <p class="text-base lg:text-lg text-marron-escuro">A mistura é preparada mecanicamente. Então, ela é
+                    encaminhada para um rolo mecânico, que quebrará os grãos, até chegar à granulometria ideal do
+                    produto. Depois da moagem, o café deve descansar por três horas para liberar mais gás carbônico.</p>
+            </div>
+            <div class="lg:w-1/2">
+                <img src="img.nossocafe/cafe3.png" alt="pó de café moído em uma escumadeira">
+            </div>
+        </section>
+
+        <section id="classificação"
+            class=" bg-cinza-claro flex flex-col lg:flex-row items-center lg:items-start gap-8 px-6 lg:px-20 py-10">
+            <div class="lg:w-1/2">
+                <img src="img.nossocafe/cafe4.png" alt="grãos torrados em um recipiente">
+            </div>
+            <div class="lg:w-1/2">
+                <h1 class="text-3xl lg:text-4xl font-bold text-marron-claro mb-6">classificação</h1>
+
+                <p class="text-base lg:text-lg text-marron-escuro">Para que os grãos sejam armazenados, eles passam por
+                    “testes”, que os classificarão de acordo com a qualidade. Depois de moídos, os grãos são colocados
+                    em um aparelho que irá enviar raios infravermelhos ao pó de café.
+                </p>
+
+                <p class="text-base lg:text-lg text-marron-escuro">De acordo com a luminescência refletida, o produto é
+                    classificado em números, que apontam uma variedade
+                    mais fraca ou mais forte.</p>
+            </div>
+
+        </section>
+        <!--cadastro franquia -->
+        <section id="cadastro-franquiado" class="py-12 bg-marron-escuro">
+            <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
+                <div class="grid grid-cols-1 lg:grid-cols-2  items-center">
+                    <!-- Lado esquerdo: Formulário -->
+                    <div class="text-nude p-8 rounded-lg shadow-md">
+                        <h2 class="text-marron-claro">Entre em contato</h2>
+                        <h1 class="text-3xl font-bold mb-4">Abra sua Franquia</h1>
+                        <p class="text-marron-claro text-sm mb-6">
+                            Preencha o formulário abaixo que entraremos em contato com você o mais rápido possível.
+                        </p>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="nome" class="block text-sm font-medium"></label>
+                                <input type="text" id="nome" name="nome"
+                                    class="w-full mt-2 p-3 bg-nude text-marron-escuro rounded-md"
+                                    placeholder="Nome e Sobrenome" />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium"></label>
+                                <input type="email" id="email" name="email"
+                                    class="w-full mt-2 p-3 bg-nude text-marron-escuro rounded-md"
+                                    placeholder="email@exemplo.com" />
+                            </div>
+                            <div>
+                                <label for="telefone" class="block text-sm font-medium"></label>
+                                <input type="text" id="telefone" name="telefone"
+                                    class="w-full mt-2 p-3 bg-nude text-marron-escuro rounded-md"
+                                    placeholder="Telefone com DDD" />
+                            </div>
+                            <button type="submit"
+                                class="w-full py-3 bg-marrom-nude text-white font-bold rounded-md hover:bg-marron-claro transition">
+                                Enviar Cadastro
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Lado direito: Imagem -->
+                    <div class="overflow-hidden shadow-md">
+                        <img src="img/banner franquia.png" alt="Imagem do Tiamate Coffee"
+                            class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="depoimentos" class="py-12">
+
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h3 class="text-sm text-marron-escuro">Depoimentos</h3>
+                    <h1 class="text-3xl font-bold text-marron-claro">Tudo sobre Tiamate Coffee</h1>
+                </div>
+                <div class="absolute">
+                    <img src="img/sobreindex.png" alt="Homem entregando café" class=" w-auto h-80 object-cover">
+                </div>
+                <!-- depoimentos -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Depoimento 1 -->
+                    <div class="bg-cinza rounded-lg shadow-md p-6">
+                        <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
+                        <p class="text-marron-escuro text-sm mb-4">
+                            O café é realmente bom, e os salgados também (peça um croissant do açafrão). Já havia pedido
+                            antes via iFood mas ao resolver visitar uma unidade, a experiência foi ainda melhor. Ótimo
+                            lugar!
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <img src="img/depoimentos1index.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full">
+                            <span class="text-terracota font-medium text-sm">Kalil Sousa</span>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="bg-cinza rounded-lg shadow-md p-6">
+                        <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
+                        <p class="text-marron-escuro text-sm mb-4">
+                            Excelente café no Centro da cidade. Vale a pena uma parada para quem estiver passando pela
+                            região.
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <img src="img/depoimentos2index.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full">
+                            <span class="text-terracota font-medium text-sm">Flávia Martins</span>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="bg-cinza rounded-lg shadow-md p-6">
+                        <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
+                        <p class="text-marron-escuro text-sm mb-4">
+                            Ótimo lugar para descansar, café, cappuccino, chá, entre outros. Ambiente tranquilo no
+                            centro de Fortaleza!
+                        </p>
+                        <div class="flex items-center space-x-3">
+                            <img src="img/depoimentos3index.png" alt="Pessoa 3" class="w-10 h-10 rounded-full">
+                            <span class="text-terracota font-medium text-sm">Iohana Holanda</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="bg-preto-medio text-nude px-6 lg:px-16 py-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Logo e Redes Sociais -->
+            <div class="flex flex-col items-center lg:items-start space-y-4">
+                <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 w-auto">
+                <p class="text-sm">Curta e Compartilhe</p>
+                <div class="flex space-x-4">
+
+                    <!-- Linha divisória -->
+                    <div class="border-t border-mostarda mt-8"></div>
+                    <!-- Ícones de redes sociais -->
+                    <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/" target="_blank"><img
+                            src="img.logo/Group.png" alt=""></a>
+                    <a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png"
+                            alt=""></a>
+                    <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop" target="_blank"><img
+                            src="img.logo/youtube.png" alt=""></a>
+                    <a href="https://br.linkedin.com/company/tiamatecoffee" target="_blank"><img
+                            src="img.logo/linkedin.png" alt=""></a>
+                </div>
+                
+            </div>
+
+            <!-- Menu de Links -->
+            <div class="flex justify-center lg:justify-center space-x-6 lg:space-x-8 text-sm">
+                <a href="index.html" class="hover:text-gray-400">Início</a>
+                <a href="nosso-cafe.html" class="hover:text-gray-400">Nosso Café</a>
+                <a href="noticias.html" class="hover:text-gray-400">Notícias</a>
+                <a href="contato.html" class="hover:text-gray-400">Contato</a>
+                <a href="cardapio.html" class="hover:text-gray-400">Cardápio</a>
+                <a href="#" class="hover:text-gray-400">Franquia</a>
+            </div>
+
+            <!-- Direitos Autorais -->
+            <div class="flex flex-col items-center lg:items-end space-y-4">
+                <p class="text-sm text-mostarda">
+                    © 2024 Tiamate - Todos os Direitos Reservados.
+                </p>
+                <img src="img.logo/logogracom .png" alt="Logo do Grupo de Desenvolvimento" class="h-8 w-auto">
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

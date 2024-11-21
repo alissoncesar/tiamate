@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="icon" href="img.logo/logotia.png">
+    <title>Cardápio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    spacing: {
+                        '34': '135px',
+                        '22': '83px',
+                    },
+                    fontSize: {
+                        'base': ['16px', '19.2px'],
+                        '24-26': ['24px', '26.11px'],
+                        '50-54': ['50px', '54.4px'],
+                        '55-59': ['55px', '59.84px']
+                    },
+                    colors: {
+                        'terracota': '#64221D',
+                        'mostarda': '#F7AE1A',
+                        'preto-medio': '#292625',
+                        'marron-escuro': '#3B2416',
+                        'marrom-nude': '#C7794A',
+                        'marron-claro': '#A97744',
+                        'nude': '#F5E7DA',
+                        'cinza-claro': '#F1F0EA',
+                        'cinza': '#E7E1DF',
+
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header class="flex items-center justify-between px-[135px] h-[110px] bg-preto-medio">
+        <img src="img.logo/LogotiaHorizontal.png" alt="tiamatecoffee" class="h-15 w-auto">
+        <nav class="flex justify-between gap-[45px] font-medium text-[18px] leading-[19.58px] text-nude">
+            <a href="index.html">Inicio</a>
+            <a href="nosso-cafe.html">Nosso Café</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="contato.html">Contato</a>
+            <a href="cardapio.html">Cardápio</a>
+          </nav>
+
+            <div class="m-8">
+                <a href="#cadastro-franquiado" class="bg-marrom-nude text-xl px-4 py-2 rounded hover:bg-marron-claro transition text-marron-escuro font-semibold text-[18px] leading-[19.58px]">Seja um Franqueado</a>
+            </div>
+
+    </header>
+
+    <main>
+        <section id="banner">
+        </section>
+
+        <section id="bebidas">
+        </section>
+
+        <section id="franquia">
+        </section>
+
+        <section id="depoimentos">
+        </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="flex flex-col gap-[50.27px] bg-preto-medio text-nude px-[135px] w-full h-[319px]">
+        <div class="flex justify-between items-center  pt-[74px]">
+            <div>
+                <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 w-auto">
+            </div>
+            <div class="flex gap-[45px]">
+                <a href="index.html" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Início</a>
+                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
+                <a href="noticias.html" class="hover:text-gray-400">Notícias</a>
+                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>
+                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Cardápio</a>
+                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Franquia</a>
+            </div>
+        </div>
+        
+        <div>
+            <hr class="border-marron-claro">
+        </div>
+        
+        <div class="flex justify-between">
+            <div class="flex gap-[34px]">
+                <div>
+                    <p class="font-[Montserrat] text-[14px] leading-[17.07px] font-medium">Curta e <br>Compartilhe</p>
+                </div>
+                <div class="flex gap-[23.5px]">
+                    <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"><img src="img.logo/Group.png"alt=""></a>
+                    <a href="https://www.instagram.com/tiamatefortaleza/"><img src="img.logo/Vector.png" alt=""></a>
+                    <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop"><img src="img.logo/youtube.png"alt=""></a>
+                    <a href="https://br.linkedin.com/company/tiamatecoffee"><img src="img.logo/linkedin.png" alt=""></a>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-[31px] pb-[71.27px]">
+                <div>
+                    <p class="font-[Montserrat] text-[10px] leading-[12.19px] font-semibold text-mostarda">
+                        © 2024 Tiamate - Todos os Direitos Reservados.
+                    </p>
+                </div>
+                <div>
+                    <img src="img.logo/logogracom .png" alt="Logo do Grupo de Desenvolvimento" class="h-8 w-auto">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

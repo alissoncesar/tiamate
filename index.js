@@ -17,3 +17,10 @@ thumbnails2.forEach(thumbnail2 => {
     mainImage2.src = thumbnail2.src;
   });
 });
+
+const btnScroll = document.getElementById('btn-scroll');
+const secaoDestino = document.getElementById('galeria-tiamate-coffe-to-go');
+
+btnScroll.addEventListener('click', () => {
+  secaoDestino.scrollIntoView({ behavior: 'smooth' });
+});

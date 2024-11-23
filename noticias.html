@@ -48,6 +48,7 @@
                             'nude': '#F5E7DA',
                             'cinza-claro': '#F1F0EA',
                             'cinza': '#E7E1DF',
+                            'marrom-white': '#CF9A5A'
 						},
 					},
 				},
@@ -56,12 +57,22 @@
 		<link rel="stylesheet" href="css/index.css" />
 	</head>
 <body>
-    <header class="flex items-center justify-between px-[135px] h-[110px] bg-preto-medio">
-        <div>
+    <!-- <header class="relative flex items-center justify-between md:px-[135px] md:h-[110px] bg-preto-medio">
+        <div class="flex justify-end">
             <img src="img.logo/LogotiaHorizontal.png" alt="tiamatecoffee">
+            <div class="absolute right-2 top-3 flex flex-col gap-1 md:hidden" id="mobile-menu-icon">
+                <button onclick="menuShow()"><div class="w-6 h-0 border-2" id="icon"></div></button>
+            </div>
+        </div>
+        <div class="md:hidden" id="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+            </ul>
         </div>
         <div>
-            <ul class="flex justify-between gap-[45px] font-medium text-[18px] leading-[19.58px] text-nude">
+            <ul class="hidden md:block md:flex justify-between gap-[45px] font-medium text-[18px] leading-[19.58px] text-nude">
                 <li><a href="index.html">Início</a></li>
                 <li><a href="nosso-cafe.html">Nosso Café</a></li>
                 <li><a href="noticias.html">Notícias</a></li>
@@ -69,10 +80,60 @@
                 <li><a href="cardapio.html">Cardápio</a></li>
             </ul>
         </div>
-        <button class="flex items-center justify-center w-[220px] h-[52px] rounded-[5px] bg-marrom-nude text-marron-escuro"  id="btn-scroll">
-            <h4 class="font-semibold text-[18px] leading-[19.58px]">Seja um Franqueado</h4>
-        </button>
+        <div class=" hidden md:flex items-center justify-center w-[220px] h-[52px] rounded-[5px] bg-marrom-nude text-marron-escuro">
+            <h4 class="font-semibold text-[18px] leading-[19.58px]"><a href="">Seja um Franqueado</a></h4>
+        </div>
+    </header> -->
+    <header>
+        <header>
+            <nav class="nav-bar">
+                <div class="logo">
+                    <img src="img.logo/LogotiaHorizontal.png" alt="">
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                        <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+                        <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                        <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+                    </ul>
+                </div>
+                <div class="login-button">
+                    <button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
+                </div>
+    
+                <div class="mobile-menu-icon">
+                    <button onclick="menuShow()"><img class="icon" src="img/img/menu_white_36dp.svg" alt=""></button>
+                </div>
+            </nav>
+            <div class="mobile-menu">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+                </ul>
+    
+                <div class="login-button">
+                    <button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
+                </div>
+            </div>
+        </header>
     </header>
+    <script>
+        function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu');
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open');
+                document.querySelector('.icon').src = "img/img/menu_white_36dp.svg";
+            } else {
+                menuMobile.classList.add('open');
+                document.querySelector('.icon').src = "img/img/close_white_36dp.svg";
+            }
+        }
+    </script>
     <main>
         <section id="banners-noticias">
             <div class="relative">
@@ -81,10 +142,10 @@
                     alt="banner"
                     class="w-full"
                 />
-                <div class="absolute top-[10px] xl:top-[171px] xl:right-[135px]">
-                    <h1 class="text-[5vw] leadind-[5vw] md:text-55-59 font-bold text-nude">Abra sua Franquia <br>Tiamate Coffee.</h1>
+                <div class="absolute top-[10px] xl:top-[171px] xl:right-[135px] pl-5">
+                    <h1 class="text-[5vw] leadind-[5vw] pl-2 md:text-55-59 font-bold text-nude">Abra sua Franquia <br>Tiamate Coffee.</h1>
                 </div>
-                <div class="w-[30vw] flex gap-5 absolute top-[19vw]   xl:gap-10 xl:top-[320px] xl:right-[147px]">
+                <div class="w-[30vw] flex gap-5 absolute top-[19vw] pl-2   xl:gap-10 xl:top-[320px] xl:right-[147px] pl-8">
                     <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"  target="_blank"
                         ><img src="img.logo/Group.png" alt=""  
                     /></a>
@@ -100,33 +161,33 @@
                 </div>
             </div>
         </section>
-        <section id="quem-somos" class="flex items-center  pt-[81px] pb-[100px]">
-            <div class=" px-[135px]">
-                <h4 class="pb-[14px] text-[18px] leading-[19.58px] text-marron-escuro ">Para os amantes de café</h4>
-                <h2 class="pb-[34px] font-bold text-[50px] leading-[54.4px] text-marron-claro">Quem somos</h2>
-                <h5 class="pb-[47px] text-[16px] leading-[19.2px] text-marron-escuro ">Com um modelo de negocio sólido e rentavel, a Tiamate se destaca entre<br>as melhores oportunidades de franquia pelas 4 razões que seguem:</h5>
+        <section id="quem-somos" class="flex justify-between items-center  pt-[81px] pb-[100px] px-8 sm:px-[100px] md:px-[135px]">
+            <div class="">
+                <h4 class="pb-[14px] text-[12px] md:text-[18px] leading-[19.58px] text-marron-escuro ">Para os amantes de café</h4>
+                <h2 class="pb-[34px] font-bold text-[44px] md:text-[50px] leading-[54.4px] text-marron-claro">Quem somos</h2>
+                <h5 class="pb-[47px] text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Com um modelo de negocio sólido e rentavel, a Tiamate se destaca entre<br>as melhores oportunidades de franquia pelas 4 razões que seguem:</h5>
                 <div class="flex gap-[8px] items-center">
-                    <img src="img.logo/coffee.png" alt="coffee">
-                    <h5 class="text-[16px] leading-[19.2px] text-marron-escuro ">Universidade corporativa que auxilia na capacitação <br>operacional e desenvolvimento de habilidades gerenciais
+                    <img src="img.logo/coffee.png" alt="coffee" class="w-[70px] h-[70px] md:w-auto md:h-auto">
+                    <h5 class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Universidade corporativa que auxilia na capacitação <br>operacional e desenvolvimento de habilidades gerenciais
                     </h5>
                 </div>
-                <div class="flex gap-[22px] pt-[60px]">
-                    <i class='bx bxs-left-arrow-circle text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer' ></i>
-                    <i class='bx bxs-right-arrow-circle text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer ' ></i>
+                <div class="flex gap-[22px] pt-[20px] md:pt-[60px]">
+                    <i class='bx bxs-left-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer' ></i>
+                    <i class='bx bxs-right-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer ' ></i>
                 </div>    
             </div>
             <div>
-                <img src="img/Rectangle 33.png" alt="tiamate coffee">
+                <img src="img/Rectangle 33.png" alt="tiamate coffee" class="hidden lg:block">
             </div>
         </section>
         <section id="video-franqueado">
-            <video class="w-full " id="myVideo" controls="false" poster="img/ccapatura de tela video 2.png">
+            <video class="w-full" id="myVideo" controls="false" poster="img/ccapatura de tela video 2.png">
 				<source src="video/tiamate-video.mp4" type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
         </section>
-        <section id="modelos-de-franquias" class="pt-[139px] pb-[164px] bg-cinza">
-            <div class="flex gap-[100px] px-[135px]">
+        <section id="modelos-de-franquias" class="pt-[139px] pb-[164px] px-5 bg-cinza">
+            <div class="hidden md:block md:flex gap-[100px] px-[135px]">
                 <div>
                     <img src="img/franquia 1.png" alt="logo tiamate coffe">
                 </div>
@@ -138,56 +199,67 @@
                     <img src="img/franquia 2.png" alt="logo tiamate coffe">
                 </div>
             </div>
+            <div class="md:hidden flex gap-2 px-5">
+                <div class="flex flex-col gap-2">
+                    <img src="img/franquia 1.png" alt="logo tiamate coffe" class="w-[400px]">
+                    <img src="img/franquia 2.png" alt="logo tiamate coffe">
+                </div>
+                <div class="flex flex-col gap-[11px]">
+                    <h3 class="text-[12px] leading-[19.58px] text-marron-escuro">A Tiamate oferece 2 modelos <br/>de franquia personalizados.</h3>
+                    <h2 class="font-bold text-[44px] leading-[48.4px] text-marron-claro">Escolha a Tiamate ideal para você</h2>
+                </div>
+                
+            </div>
         </section>
-        <section id="galeria-tiamate-coffe" class="flex gap-80 px-[135px] pt-[130px]">
+        <section id="galeria-tiamate-coffe" class="flex flex-col gap-10 md:flex md:flex-row md:gap-80 px-8 md:px-[135px] pt-[130px]">
             <div>
                 <h5 class="text-[18px] leading-[19.58px] text-marron-escuro">Cafeteria</h5>
-                <h3 class="font-bold text-[50px] leading-[54.4px] text-marron-claro">Tiamate Coffee</h3>
-                <ul class="font-bold text-[18px] leading-[50px] text-marron-escuro">
+                <h3 class="font-bold text-[42px] leading-[48px] md:text-[50px] md:leading-[54.4px] text-marron-claro">Tiamate Coffee</h3>
+                <ul class="font-bold text-[12px] leading-[28px] md:text-[18px] md:leading-[50px] text-marron-escuro">
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Espaço: <span class="font-normal">30 a 45 m²</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Faturamento médio: <span class="font-normal">R$ 40 MIL</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span class="leading-6">
                             Royaltyes: <span class="font-normal">5% do faturamento. <br/>(Valor mínimo R$ 2.000,00)</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Taxa de Marketing: <span class="font-normal">2% do Faturamento</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Ponto de Equilibrio: <span class="font-normal">2 a 3 Meses</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Prazo de Retorno: <span class="font-normal">18 a 24 Meses</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]"> 
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]"> 
                         <span>
                             Lucro Médio: <span class="font-normal">25%</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Investimento Total Estimado: <span class="font-normal">R$ 130 MIL</span>
                         </span>
@@ -205,55 +277,55 @@
                 </div>
             </div>
         </section>
-        <section id="galeria-tiamate-coffe-to-go" class="flex gap-[277px] px-[135px] pt-[130px] pb-[203px]">
+        <section id="galeria-tiamate-coffe-to-go" class="flex flex-col gap-10 md:flex md:flex-row md:gap-80 px-8 md:px-[135px] pt-[130px]">
             <div>
                 <h5 class="text-[18px] leading-[19.58px] text-marron-escuro">Cafeteria</h5>
-                <h3 class="font-bold text-[42px] leading-[45.7px] text-marron-claro">Tiamate Coffee To Go</h3>
-                <ul class="font-bold text-[18px] leading-[50px] text-marron-escuro">
+                <h3 class="font-bold text-[42px] leading-[48px] md:text-[50px] md:leading-[54.4px] text-marron-claro">Tiamate Coffee To Go</h3>
+                <ul class="font-bold text-[12px] leading-[28px] md:text-[18px] md:leading-[50px] text-marron-escuro">
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Espaço: <span class="font-normal">8 a 12 m²</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Faturamento médio: <span class="font-normal">R$ 25 MIL</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span class="leading-6">
                             Royaltyes: <span class="font-normal">5% do faturamento. <br/>(Valor mínimo R$ 1.500,00)</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Taxa de Marketing: <span class="font-normal">2% do Faturamento</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Ponto de Equilibrio: <span class="font-normal">2 a 3 Meses</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Prazo de Retorno: <span class="font-normal">18 a 24 Meses</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]"> 
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]"> 
                         <span>
                             Lucro Médio: <span class="font-normal">25%</span>
                         </span>
                     </li>
                     <li class="flex gap-[22px] items-center">
-                        <img src="img/ok.png" alt="" class="w-[22px] h-[22px]">
+                        <img src="img/ok.png" alt="" class="w-[16px] h-[16px] md:w-[22px] md:h-[22px]">
                         <span>
                             Investimento Total Estimado: <span class="font-normal">R$ 100 MIL</span>
                         </span>
@@ -271,26 +343,102 @@
                 </div>
             </div>
         </section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section id="mais-informacoes" class="pt-[203px]">
+                <div class="flex flex-col gap-[37px] justify-center items-center w-full h-[500px] bg-[url('img/tiamate-mais-informaçoes.png')] bg-center">
+                    <div class="flex flex-col justify-center items-center pl-2">
+                        <h1 class="text-[4vw] leadind-[5vw] md:text-[44px] lg:text-[50px] leading-[54.4px] font-bold text-nude">Quer lucrar com sua própria Tiamate?</h1>
+                        <h1 class="text-[4vw] leadind-[5vw] md:text-[44px] lg:text-[50px] leading-[54.4px] font-bold text-nude">Seja um franqueado!</h1>
+                    </div>
+                    <div>
+                        <button class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro w-[270px] md:w-[570px] h-[60px] rounded-[5px] bg-marrom-nude">Mais Informações</button>
+                    </div>
+                </div>
+        </section>
+        <section id="diferencias-da-tiamate">
+            <div class="flex flex-col gap-4 items-center px-2">
+                <h3 class="font-bold text-[32px] leading-[48.4px] text-marron-claro ">Diferenciais da Tiamate</h3>
+                <div class="flex justify-between">
+                    <img src="img.noticias/lucratividade-logo.png" alt="" class="w-[10%] h-[10%]">
+                    <img src="img.noticias/frete-logo.png" alt="" class="w-[10%] h-[10%]">
+                    <img src="img.noticias/desenvolvimento-logo.png" alt="" class="w-[10%] h-[10%]">
+                    <img src="img.noticias/ponto-comercial-logo.png" alt="" class="w-[10%] h-[10%]">
+                    <img src="img.noticias/software-logo.png" alt="" class="w-[10%] h-[10%]">
+                    <img src="img.noticias/equipe-logo.png" alt="" class="w-[10%] h-[10%]">
+                </div>
+                <div class="flex justify-between items-center gap-5">
+                    <img src="img.noticias/lucratividade.png" alt="" class="w-[30%] h-[30%]">
+                    <div class="flex flex-col items-center">
+                        <h3 class="font-bold text-[5vw] leading-[40.4px] text-marron-claro ">Media de Lucratividade</h3>
+                        <p class="text-[2vw] text-marron-escuro">A tiamate possui faturamento bruto percentual de lucro de 12% a 18%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="mais-informacoes2">
+            <div class="flex flex-col gap-[37px] justify-center items-center w-full h-[500px] bg-[url('img/mais-informacoes2.png')] bg-center">
+                <div class="flex flex-col justify-center items-center">
+                    <h1 class="text-[5vw] leadind-[5vw] md:text-[50px] leading-[54.4px] font-bold text-nude">Se você procura um negócio de</h1>
+                    <h1 class="text-[5vw] leadind-[5vw] md:text-[50px] leading-[54.4px] font-bold text-nude">sucesso, venha para Tiamte Coffe!</h1>
+                </div>
+                <div>
+                    <button class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro w-[270px] md:w-[570px] h-[60px] rounded-[5px] bg-marrom-nude">Mais Informações</button>
+                </div>
+            </div>
+        </section>
+        <section id="depoimento-de-franqueada" class="pt-[146px] pb-[234px]">
+            <div class="flex flex-col gap-[46px] justify-center items-center">
+                <h2 class="font-bold text-[36px] sm:text-[44px] md:text-[50px] leading-[48.4px] md:leading-[54.4px] text-marron-claro pl-12">Depoimento Franqueada</h2>
+                <img src="img/Mask Group.png" alt="Foto de Aquila Carvalho">
+                <p class="text-[10px] md:text-[16px] leading-[13.2px] md:leading-[19.2px] text-center px-2">"Antes de optar por ser uma franqueada Tiamate,analisei várias franquias do mercado. <br>Mas senti, já nas primeiras apresentações que o objetivo do Grupo não era simplismente <br>que eu abrisse mais uma loja, e sim que eu me tornasse um parceiro de sucesso. O <br>processo de procura do ponto e abertura da loja foi muito prático. A consultoria e os <br>treinamentos com o apoio dos diversos manuais da marca transcederam minhas <br>expectativas. Os resultados estão sendo excelentes e percebidos por todos, sócios, <br>funcionários e, principalmente, pelos clientes".</p>
+                <div class="flex flex-col items-center">
+                    <h5 class="font-bold text-[18px] md:text-[24px] leading-[26.11px] text-terracota">Aquila Carvalho</h5>
+                    <p class="text-[10px] md:text-[16px] leading-[19.2px]">Franqueada - Unidade Salvador - BA</p>
+                </div>
+            </div>
+        </section>
+        <section id="noticias" class="px-[50px] pb-[190px] xl:px-[135px]">
+            <div class="flex flex-col gap-[30px] w-full">
+                <div>
+                    <h5 class="text-[18px] leading-[19.58px]">Fique por dento</h5>
+                    <h3 class="font-bold text-[50px] leading-[54.4px] text-marron-claro">Tiamate na Mídia</h3>
+                </div>
+                <div class="flex flex-col gap-10 md:flex md:flex-row md:gap-2 md:justify-between w-full">
+                    <div class="flex flex-col gap-[20px]">
+                        <img src="img/primeira-noticia.jpeg" alt="" class="w-[100%] xl:w-[370px] xl:h-[230px] xl:rounded-[5px]">
+                        <h4 class="font-bold text-[16px] md:text-[13px] lg:text-[20px] xl:text-[24px] leading-[20px] lg:leading-[26.11px] text-terracota">Conheça cinco lugares no <br>centro para ir
+                            com os amigos</h4>
+                        <button class="w-[100%] h-[50px] rounded-[5px] border-2 border-marrom-white text-marrom-white hover:bg-marrom-white hover:font-bold hover:text-marron-escuro"><a href="https://mais.opovo.com.br/jornal/cidades/2018/10/destaques-inovadores.html">Notícia Completa</a></button>
+                    </div>
+                    <div class="flex flex-col gap-[20px]">
+                        <img src="img/segunda-noticia.jpeg" alt="" class="w-[100%] xl:w-[370px] xl:h-[230px] xl:rounded-[5px]">
+                        <h4 class="font-bold text-[16px] md:text-[13px] lg:text-[20px] xl:text-[24px] leading-[20px] lg:leading-[26.11px] text-terracota">Um gostinho moderno
+                            <br>no coração de Fortaleza</h4>
+                        <button class="w-[100%] h-[50px] rounded-[5px] border-2 border-marrom-white text-marrom-white hover:bg-marrom-white hover:font-bold hover:text-marron-escuro">Notícia Completa</button>
+                    </div>
+                    <div class="flex flex-col gap-[20px]">
+                        <img src="img/terceira-noticia.jpeg" alt="" class="w-[100%] xl:w-[370px] xl:h-[230px] xl:rounded-[5px]">
+                        <h4 class="font-bold text-[16px] md:text-[13px] lg:text-[20px] xl:text-[24px] leading-[20px] lg:leading-[26.11px] text-terracota">Cafeteria é nova tendência
+                            <br>de negócio em Salvador</h4>
+                        <a href="https://atarde.com.br/empregos/cafeteria-de-rua-e-nova-tendencia-de-negocio-em-salvador-927394"><button class="w-[100%] h-[50px] rounded-[5px] border-2 border-marrom-white text-marrom-white hover:bg-marrom-white hover:font-bold hover:text-marron-escuro">Notícia Completa</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section></section>
     </main>
     
-    <footer class="flex flex-col gap-[50.27px] bg-preto-medio text-nude px-[135px] w-full h-[319px]">
-        <div class="flex justify-between items-center  pt-[74px]">
+    <footer class="flex flex-col gap-[50.27px] bg-preto-medio text-nude px-[10px] md:px-[100px] lg:px-[135px] w-full h-[319px]">
+        <div class="flex justify-between items-center  pt-[74px] w-full">
             <div>
-                <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 w-auto">
+                <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 ">
             </div>
-            <div class="flex gap-[45px]">
-                <a href="index.html" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Início</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
+            <div class="flex gap-2 sm:gap-5 md:gap-[45px]">
+                <a href="index.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Início</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
                 <a href="noticias.html" class="hover:text-gray-400">Notícias</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Cardápio</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Franquia</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Cardápio</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Franquia</a>
             </div>
         </div>
         
@@ -301,7 +449,7 @@
         <div class="flex justify-between">
             <div class="flex gap-[34px]">
                 <div>
-                    <p class="font-[Montserrat] text-[14px] leading-[17.07px] font-medium">Curta e <br>Compartilhe</p>
+                    <p class="font-[Montserrat] text-[8px] md:text-[14px] leading-[10px] md:leading-[17.07px] font-medium">Curta e <br>Compartilhe</p>
                 </div>
                 <div class="flex gap-[23.5px]">
                     <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"><img src="img.logo/Group.png"alt=""></a>
@@ -313,7 +461,7 @@
             
             <div class="flex items-center gap-[31px] pb-[71.27px]">
                 <div>
-                    <p class="font-[Montserrat] text-[10px] leading-[12.19px] font-semibold text-mostarda">
+                    <p class="font-[Montserrat] text-[4px] md:text-[10px] leading-[6px] md:leading-[12.19px] font-semibold text-mostarda">
                         © 2024 Tiamate - Todos os Direitos Reservados.
                     </p>
                 </div>

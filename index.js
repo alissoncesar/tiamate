@@ -24,3 +24,5 @@ const secaoDestino = document.getElementById('galeria-tiamate-coffe-to-go');
 btnScroll.addEventListener('click', () => {
   secaoDestino.scrollIntoView({ behavior: 'smooth' });
 });
+
+

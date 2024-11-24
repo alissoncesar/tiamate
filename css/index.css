@@ -137,7 +137,7 @@
   }
   
   .main-image2 {
-    width: 90%;
+    width: 70%;
   }
   
   .thumbnails2 {
@@ -154,6 +154,36 @@
     height: 90px;
     cursor: pointer;
     border-radius: 5px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .gallery2 {
+        display: flex;
+        gap: 12px;
+        width: 70%;
+        height: 517px;
+        border-radius: 5px;
+      }
+      
+      .main-image2 {
+        width: 70%;
+      }
+      
+      .thumbnails2 {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        
+       
+      }
+      
+      .thumbnail2 {
+        width: 400px;
+        height: 90px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
   }
 
   
@@ -264,5 +294,32 @@
     }
     .open {
         display: block;
+    }
+}
+
+.carrossel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+
+@media screen and (min-width: 768px) {
+    .carrossel-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .carrossel-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        gap: 88px;
     }
 }

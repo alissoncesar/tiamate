@@ -166,20 +166,68 @@
                 <h4 class="pb-[14px] text-[12px] md:text-[18px] leading-[19.58px] text-marron-escuro ">Para os amantes de café</h4>
                 <h2 class="pb-[34px] font-bold text-[44px] md:text-[50px] leading-[54.4px] text-marron-claro">Quem somos</h2>
                 <h5 class="pb-[47px] text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Com um modelo de negocio sólido e rentavel, a Tiamate se destaca entre<br>as melhores oportunidades de franquia pelas 4 razões que seguem:</h5>
-                <div class="flex gap-[8px] items-center">
-                    <img src="img.logo/coffee.png" alt="coffee" class="w-[70px] h-[70px] md:w-auto md:h-auto">
-                    <h5 class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Universidade corporativa que auxilia na capacitação <br>operacional e desenvolvimento de habilidades gerenciais
-                    </h5>
+                <div class="carousel">
+                    <div class="carousel-item flex gap-[8px] items-center">
+                        <img src="img.noticias/primeira.png" alt="coffee" class="w-[70px] h-[70px] md:w-auto md:h-auto">
+                        <h5 class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Universidade corporativa que auxilia na capacitação <br>operacional e desenvolvimento de habilidades gerenciais
+                        </h5>
+                    </div>
+                    <div class="carousel-item hidden flex gap-[8px] items-center">
+                        <img src="img.noticias/segunda.png" alt="coffee" class="w-[70px] h-[70px] md:w-auto md:h-auto">
+                        <h5 class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Modelo inovador e
+                            produtos patenteados
+                        </h5>
+                    </div>
+                    <div class="carousel-item hidden flex gap-[8px] items-center">
+                        <img src="img.noticias/terceira.png" alt="coffee" class="w-[70px] h-[70px] md:w-auto md:h-auto">
+                        <h5 class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Ampla oferta de produtos,
+                            seja bebidas ou comidas
+                        </h5>
+                    </div>
+                    <div class="carousel-item hidden flex gap-[8px] items-center">
+                        <img src="img.noticias/quarta.png" alt="coffee" class="w-[70px] h-[70px] md:w-auto md:h-auto">
+                        <h5 class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Equipe de consultores
+                            altamente especializada
+                        </h5>
+                    </div>
                 </div>
                 <div class="flex gap-[22px] pt-[20px] md:pt-[60px]">
-                    <i class='bx bxs-left-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer' ></i>
-                    <i class='bx bxs-right-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer ' ></i>
+                    <i id="btn-prev" class='bx bxs-left-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer' ></i>
+                    <i id="btn-next" class='bx bxs-right-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer ' ></i>
                 </div>    
             </div>
             <div>
                 <img src="img/Rectangle 33.png" alt="tiamate coffee" class="hidden lg:block">
             </div>
         </section>
+        <script>
+            const prevButton = document.getElementById('btn-prev');
+            const nextButton = document.getElementById('btn-next');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            let currentItem = 0;
+    
+            function showItem(index) {
+            carouselItems.forEach((item, i) => {
+            item.classList.add('hidden');
+            if (i === index) {
+          item.classList.remove('hidden');
+            }
+            });
+            }
+    
+            nextButton.addEventListener('click', () => {
+            currentItem = (currentItem + 1) % carouselItems.length;
+            showItem(currentItem);
+            });
+    
+            prevButton.addEventListener('click', () => {
+            currentItem = (currentItem - 1 + carouselItems.length) % carouselItems.length;
+            showItem(currentItem);
+            });
+    
+            // Mostrar o primeiro item por padrão
+            showItem(0);
+        </script>
         <section id="video-franqueado">
             <video class="w-full" id="myVideo" controls="false" poster="img/ccapatura de tela video 2.png">
 				<source src="video/tiamate-video.mp4" type="video/mp4" />
@@ -354,26 +402,83 @@
                     </div>
                 </div>
         </section>
-        <section id="diferencias-da-tiamate">
-            <div class="flex flex-col gap-4 items-center px-2">
-                <h3 class="font-bold text-[32px] leading-[48.4px] text-marron-claro ">Diferenciais da Tiamate</h3>
-                <div class="flex justify-between">
-                    <img src="img.noticias/lucratividade-logo.png" alt="" class="w-[10%] h-[10%]">
-                    <img src="img.noticias/frete-logo.png" alt="" class="w-[10%] h-[10%]">
-                    <img src="img.noticias/desenvolvimento-logo.png" alt="" class="w-[10%] h-[10%]">
-                    <img src="img.noticias/ponto-comercial-logo.png" alt="" class="w-[10%] h-[10%]">
-                    <img src="img.noticias/software-logo.png" alt="" class="w-[10%] h-[10%]">
-                    <img src="img.noticias/equipe-logo.png" alt="" class="w-[10%] h-[10%]">
+        <section id="diferencias-da-tiamate" class="pb-[210px] pt-[200px]">
+            <div class="flex flex-col gap-6 md:flex md:flex-row md:justify-between md:items-center md:gap-[135px] items-center px-5">
+                <div class="flex flex-col gap-6">
+                    <h3 class="font-bold text-[32px] md:text-[50px] leading-[48.4px] md:leading-[54.4px] text-marron-claro ">Diferenciais da Tiamate</h3>
+                    <div class="flex justify-between md:grid md:grid-cols-4 md:gap-[21px]">
+                        <button id="btn-1" class="botao w-[10%] h-[10%] md:w-[56px] md:h-[56px]"><img src="img.noticias/lucratividade-logo.png" alt=""></button>
+                        <button id="btn-2" class="botao w-[10%] h-[10%] md:w-[56px] md:h-[56px]"><img src="img.noticias/frete-logo.png" alt=""></button>
+                        <button id="btn-3" class="botao w-[10%] h-[10%] md:w-[56px] md:h-[56px]"><img src="img.noticias/desenvolvimento-logo.png" alt=""></button>
+                        <button id="btn-4" class="botao w-[10%] h-[10%] md:w-[56px] md:h-[56px]"><img src="img.noticias/ponto-comercial-logo.png" alt=""></button>
+                        <button id="btn-5" class="botao w-[10%] h-[10%] md:w-[56px] md:h-[56px]"><img src="img.noticias/software-logo.png" alt=""></button>
+                        <button id="btn-6" class="botao w-[10%] h-[10%] md:w-[56px] md:h-[56px]"><img src="img.noticias/equipe-logo.png" alt=""></button>
+                    </div>
                 </div>
-                <div class="flex justify-between items-center gap-5">
-                    <img src="img.noticias/lucratividade.png" alt="" class="w-[30%] h-[30%]">
-                    <div class="flex flex-col items-center">
-                        <h3 class="font-bold text-[5vw] leading-[40.4px] text-marron-claro ">Media de Lucratividade</h3>
-                        <p class="text-[2vw] text-marron-escuro">A tiamate possui faturamento bruto percentual de lucro de 12% a 18%</p>
+                <div class="carrossel pt-20">
+                    <div class="carrossel-item flex justify-center items-center gap-5 md:gap-[88px]">
+                        <img src="img.noticias/lucratividade.png" alt="" class="w-[25%] h-[25%] md:w-[339px] md:h-[339px]">
+                        <div class="flex flex-col items-center md:gap-[18px]">
+                            <h3 class="font-bold text-[5vw] md:text-[50px] leading-[40.4px] md:leading-[54.4px] text-marron-claro ">Media de Lucratividade</h3>
+                            <p class="text-[2vw] md:text-[18px] md:leading-[19.58px] text-marron-escuro">A tiamate possui faturamento bruto percentual de lucro de 12% a 18%</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-item hidden flex justify-center items-center gap-5">
+                        <img src="img.noticias/frete.png" alt="" class="w-[25%] h-[25%]">
+                        <div class="flex flex-col items-center">
+                            <h3 class="font-bold text-[5vw] leading-[40.4px] text-marron-claro ">Operação
+                                e Logística</h3>
+                            <p class="text-[2vw] text-marron-escuro">A Tiamate possui um departamento de logistica que avalia <br>cada caso e analisa a entrega oferecendo soluções para <br>que as unidades não fiquem sem produtos.</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-item hidden flex justify-center items-center gap-5">
+                        <img src="img.noticias/desenvolvimento.png" alt="" class="w-[25%] h-[25%]">
+                        <div class="flex flex-col items-center">
+                            <h3 class="font-bold text-[5vw] leading-[40.4px] text-marron-claro ">Desenvolvimento <br>de Produtos</h3>
+                            <p class="text-[2vw] text-marron-escuro">Possui uma equipe interdiciplinar de Nutricionistas
+                                <br>e baristas que desenvolvem e se preocupam com os <br>melhores padrões de sabor e nutrição dos produtos.</p>
+                        </div>                    
+                    </div>
+                    <div class="carrossel-item hidden flex justify-center items-center gap-5">
+                        <img src="img.noticias/ponto-comercial.png" alt="" class="w-[25%] h-[25%]">
+                        <div class="flex flex-col items-center">
+                            <h3 class="font-bold text-[5vw] leading-[40.4px] text-marron-claro ">Analise de Ponto Comercial</h3>
+                            <p class="text-[2vw] text-marron-escuro">Dedica profissionais para prospecção e análise de pontos que sejam pertinentes ao modelo de negócios.</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-item hidden flex justify-center items-center gap-5">
+                        <img src="img.noticias/software.png" alt="" class="w-[25%] h-[25%]">
+                        <div class="flex flex-col items-center">
+                            <h3 class="font-bold text-[5vw] leading-[40.4px] text-marron-claro ">Software</h3>
+                            <p class="text-[2vw] text-marron-escuro">Possui um software de gestão integrada</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-item hidden flex justify-center items-center gap-5">
+                        <img src="img.noticias/equipe.png" alt="" class="w-[25%] h-[25%]">
+                        <div class="flex flex-col items-center">
+                            <h3 class="font-bold text-[5vw] leading-[40.4px] text-marron-claro ">Equipe</h3>
+                            <p class="text-[2vw] text-marron-escuro">A Tiamate possui um departamento que auxilia <br>na seleção e contratação da 1ª equipe</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <script>
+            const buttons = document.querySelectorAll('.botao');
+            const items = document.querySelectorAll('.carrossel-item');
+
+            buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+            items.forEach(item => {
+            item.classList.add('hidden');   
+
+                });
+            items[index].classList.remove('hidden');
+                });
+            });
+        </script>
+        
         <section id="mais-informacoes2">
             <div class="flex flex-col gap-[37px] justify-center items-center w-full h-[500px] bg-[url('img/mais-informacoes2.png')] bg-center">
                 <div class="flex flex-col justify-center items-center">

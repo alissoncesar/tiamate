@@ -42,20 +42,41 @@
 </head>
 
 <body>
-    <header class="flex items-center justify-between px-[135px] h-[110px] bg-preto-medio">
-        <img src="img.logo/LogotiaHorizontal.png" alt="tiamatecoffee" class="h-15 w-auto">
-        <nav class="flex justify-between gap-[45px] font-medium text-[18px] leading-[19.58px] text-nude">
-            <a href="index.html">Inicio</a>
-            <a href="nosso-cafe.html">Nosso Café</a>
-            <a href="noticias.html">Notícias</a>
-            <a href="contato.html">Contato</a>
-            <a href="cardapio.html">Cardápio</a>
-          </nav>
-
-            <div class="m-8">
-                <a href="#cadastro-franquiado" class="bg-marrom-nude text-xl px-4 py-2 rounded hover:bg-marron-claro transition text-marron-escuro font-semibold text-[18px] leading-[19.58px]">Seja um Franqueado</a>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img.logo/LogotiaHorizontal.png" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
             </div>
 
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+                <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+            </ul>
+
+            <div class="login-button">
+                <a href="#cadastro-franqueados">Seja um Franqueado</a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -74,18 +95,18 @@
     </main>
 
     <!-- footer -->
-    <footer class="flex flex-col gap-[50.27px] bg-preto-medio text-nude px-[135px] w-full h-[319px]">
-        <div class="flex justify-between items-center  pt-[74px]">
+    <footer class="flex flex-col gap-[50.27px] bg-preto-medio text-nude px-[10px] md:px-[100px] lg:px-[135px] w-full h-[319px]">
+        <div class="flex justify-between items-center  pt-[74px] w-full">
             <div>
-                <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 w-auto">
+                <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 ">
             </div>
-            <div class="flex gap-[45px]">
-                <a href="index.html" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Início</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
-                <a href="noticias.html" class="hover:text-gray-400">Notícias</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Cardápio</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Franquia</a>
+            <div class="md:flex gap-[45px]">
+                <a href="index.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Início</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
+                <a href="noticias.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Notícias</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Cardápio</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Franquia</a>
             </div>
         </div>
         
@@ -96,7 +117,7 @@
         <div class="flex justify-between">
             <div class="flex gap-[34px]">
                 <div>
-                    <p class="font-[Montserrat] text-[14px] leading-[17.07px] font-medium">Curta e <br>Compartilhe</p>
+                    <p class="font-[Montserrat] text-[8px] md:text-[14px] leading-[10px] md:leading-[17.07px] font-medium">Curta e <br>Compartilhe</p>
                 </div>
                 <div class="flex gap-[23.5px]">
                     <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"><img src="img.logo/Group.png"alt=""></a>
@@ -108,7 +129,7 @@
             
             <div class="flex items-center gap-[31px] pb-[71.27px]">
                 <div>
-                    <p class="font-[Montserrat] text-[10px] leading-[12.19px] font-semibold text-mostarda">
+                    <p class="font-[Montserrat] text-[4px] md:text-[10px] leading-[6px] md:leading-[12.19px] font-semibold text-mostarda">
                         © 2024 Tiamate - Todos os Direitos Reservados.
                     </p>
                 </div>
@@ -118,7 +139,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

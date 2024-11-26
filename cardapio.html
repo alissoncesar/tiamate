@@ -7,6 +7,11 @@
     <script src="index.js" defer></script>
     <link rel="icon" href="img.logo/logotia.png">
     <title>Cardápio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -38,54 +43,439 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="css/index.css">
+    
 </head>
 
 <body>
-    <header class="flex items-center justify-between px-[135px] h-[110px] bg-preto-medio">
-        <img src="img.logo/LogotiaHorizontal.png" alt="tiamatecoffee" class="h-15 w-auto">
-        <nav class="flex justify-between gap-[45px] font-medium text-[18px] leading-[19.58px] text-nude">
-            <a href="index.html">Inicio</a>
-            <a href="nosso-cafe.html">Nosso Café</a>
-            <a href="noticias.html">Notícias</a>
-            <a href="contato.html">Contato</a>
-            <a href="cardapio.html">Cardápio</a>
-          </nav>
-
-            <div class="m-8">
-                <a href="#cadastro-franquiado" class="bg-marrom-nude text-xl px-4 py-2 rounded hover:bg-marron-claro transition text-marron-escuro font-semibold text-[18px] leading-[19.58px]">Seja um Franqueado</a>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img.logo/LogotiaHorizontal.png" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
             </div>
 
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+                <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+            </ul>
+
+            <div class="login-button">
+                <button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
+            </div>
+        </div>
     </header>
+    <script>
+        function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu');
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open');
+                document.querySelector('.icon').src = "img/img/menu_white_36dp.svg";
+            } else {
+                menuMobile.classList.add('open');
+                document.querySelector('.icon').src = "img/img/close_white_36dp.svg";
+            }
+        }
+    </script>
+    <main>
 
     <main>
-        <section id="banner">
+        <section id="banners" class="w-full">
+			<div class="relative">
+				<img src="img.cardapio/banner.png" alt="banner" class="w-full" />
+				<div class="absolute top-[10px] xl:top-[171px] xl:left-[135px]">
+					<h1 class="text-[5vw] leading-[5vw] md:text-55-59 font-bold text-nude"> O verdadeiro
+                        <br>sabor do Café.</h1>
+				</div>
+				<div class="w-[30vw] flex gap-5 absolute top-[24vw]   xl:gap-10 xl:top-[360px] xl:left-[135px]">
+					<a href="https://www.facebook.com/tiamatecoffeefortalezacentro/" target="_blank"><img
+							src="img.logo/Group.png" alt="" /></a>
+					<a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png"
+							alt="" /></a>
+					<a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop" target="_blank"><img
+							src="img.logo/youtube.png" alt="" /></a>
+					<a href="https://br.linkedin.com/company/tiamatecoffee" target="_blank"><img
+							src="img.logo/linkedin.png" alt="" /></a>
+				</div>
+			</div>
+
+        <section id="bebidas" class="flex gap-5 px-1">
+            <div>
+                <ul>
+                    <li id="btn-1" class="opcao flex gap-1 items-center font-medium hover:font-bold text-[12px] hover:text-[18px] leading-[56px] text-marron-escuro hover:text-marrom-nude">
+                        <div class="linha w-[12px] hover:w-[24px] h-[2px] bg-marron-escuro hover:bg-marrom-nude"></div>
+                        <p>Lançamentos</p>
+                    </li>
+                    <li id="btn-2" class="opcao flex gap-1 items-center font-medium hover:font-bold text-[12px] hover:text-[18px] leading-[56px] text-marron-escuro hover:text-marrom-nude">
+                        <div class="linha w-[12px] hover:w-[24px] h-[2px] bg-marron-escuro hover:bg-marrom-nude"></div>
+                        <p>Expressos</p>
+
+                    </li>
+                    <li id="btn-3" class="opcao flex gap-1 items-center font-medium hover:font-bold text-[12px] hover:text-[12px] leading-[56px] text-marron-escuro hover:text-marrom-nude">
+                        <div class="linha w-[12px] hover:w-[24px] h-[2px] bg-marron-escuro hover:bg-marrom-nude"></div>
+                        <p>Tiamatino Coffee</p>
+
+                    </li>
+                    <li id="btn-4" class="opcao flex gap-1 items-center font-medium hover:font-bold text-[12px] hover:text-[18px] leading-[56px] text-marron-escuro hover:text-marrom-nude">
+                        <div class="linha w-[12px] hover:w-[24px] h-[2px] bg-marron-escuro hover:bg-marrom-nude"></div>
+                        <p>Tiamatino Cream</p>
+
+                    </li>
+                    <li id="btn-5" class="opcao flex gap-1 items-center font-medium hover:font-bold text-[12px] hover:text-[18px] leading-[56px] text-marron-escuro hover:text-marrom-nude">
+                        <div class="linha w-[12px] hover:w-[24px] h-[2px] bg-marron-escuro hover:bg-marrom-nude"></div>
+                        <p>Bebidas Italianas</p>
+
+                    </li>
+                    <li id="btn-6" class="opcao flex gap-1 items-center font-medium hover:font-bold text-[12px] hover:text-[18px] leading-[56px] text-marron-escuro hover:text-marrom-nude">
+                        <div class="linha w-[12px] hover:w-[24px] h-[2px] bg-marron-escuro hover:bg-marrom-nude"></div>
+                        <p>Cappuccino</p>
+
+                    </li>
+                    <li id="btn-7" class="opcao flex gap-1 items-center font-medium hover:font-bold text-[12px] hover:text-[18px] leading-[56px] text-marron-escuro hover:text-marrom-nude">
+                        <div class="linha w-[12px] hover:w-[24px] h-[2px] bg-marron-escuro hover:bg-marrom-nude"></div>
+                        <p>Bebidas Geladas</p>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="carrossel2">
+                <div class="carrossel-item2">
+                    <div class="relative">
+                        <img src="img.cardapio/Bebidas1.png" alt="Merry Berry" class="w-[118px] h-[117px]">
+                        <p class="font-medium text-[12px] leading-[56px] absolute top-[86px] right-[49px] ">Merry Berry</p>
+                    </div>
+                </div>
+                <div class="carrossel-item2 hidden">
+                    <div>
+                        <img src="img.cardapio/Bebidas2.png" alt="Tradicional">
+                        <p>Tradicional</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas3.png" alt="Americado">
+                        <p>Americado</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas4.png" alt="Macchiatto">
+                        <p>Macchiatto</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas5.png" alt="Chantilly">
+                        <p>Chantilly</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas6.png" alt="Latte">
+                        <p>Latte</p>
+                    </div>
+                </div>
+                <div class="carrossel-item2 hidden">
+                    <div>
+                        <img src="img.cardapio/Bebidas7.png" alt="Tiamatino coffee brigadeiro">
+                        <p>Tiamatino coffee brigadeiro</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas8.png" alt="Tiamatino coffee cookie">
+                        <p>Tiamatino coffee cookie</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas9.png" alt="Tiamatino coffee caramelo">
+                        <p>Tiamatino coffee caramelo</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas10.png" alt="Tiamatino coffee tradicional">
+                    <p>Tiamatino coffee tradicional</p>
+                    </div>
+                </div>
+                <div class="carrossel-item2 hidden">
+                    <div>
+                        <img src="img.cardapio/Bebidas11.png" alt="Tiamatino cream de morango">
+                        <p>Tiamatino cream de morango</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas12.png" alt="Tiamatino cream de baunilha">
+                        <p>Tiamatino cream de baunilha</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas13.png" alt="Chocolate">
+                        <p>Chocolate</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas14.png" alt="Churros">
+                        <p>Churros</p>
+                    </div>
+                </div>
+                <div class="carrossel-item2 hidden">
+                    <div>
+                        <img src="img.cardapio/Bebidas15.png" alt="Strawberry Soda">
+                        <p>Strawberry Soda</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas16.png" alt="Ponkan Tangerine Soda">
+                        <p>Ponkan Tangerine Soda</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas17.png" alt="Green Apple Soda">
+                        <p>Green Apple Soda</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas18.png" alt="Peach Soda">
+                        <p>Peach Soda</p>
+                    </div>
+                </div>
+                <div class="carrossel-item2 hidden">
+                    <div>
+                        <img src="img.cardapio/Bebidas19.png" alt="Tradicional">
+                        <p>Tradicional</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas20.png" alt="Baunilha">
+                        <p>Baunilha</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas21.png" alt="Chocolate com Canela">
+                        <p>Chocolate com Canela</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas22.png" alt="Avelã">
+                        <p>Avelã</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas23.png" alt="Mocha">
+                        <p>Mocha</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas24.png" alt="Caramelo Tiamate">
+                        <p>Caramelo Tiamate</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas25.png" alt="Chocolate Clássico Cremoso">
+                        <p>Chocolate Clássico Cremoso</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas26.png" alt="Latte Tea">
+                        <p>Latte Tea</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas27.png" alt="Choco Tea">
+                        <p>Choco Tea</p>
+                    </div>
+                </div>
+                <div class="carrossel-item2 hidden">
+                    <div>
+                        <img src="img.cardapio/Bebidas28.png" alt="Ice Tea Pêssego">
+                        <p>Ice Tea Pêssego</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas29.png" alt="Ice Tea Limão">
+                        <p>Ice Tea Limão</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas30.png" alt="Suco de">
+                        <p>Laranja</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas31.png" alt="Suco de Uva">
+                        <p>Suco de Uva</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas32.png" alt="Água sem gás">
+                        <p>Água sem gás</p>
+                    </div>
+                    <div>
+                        <img src="img.cardapio/Bebidas33.png" alt="Água com
+                    gás">
+                        <p>Água com gás</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="bebidas">
+        <script>
+            const buttons = document.querySelectorAll('.opcao');
+            const items = document.querySelectorAll('.carrossel-item2');
+
+            buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+            items.forEach(item => {
+            item.classList.add('hidden');   
+
+                });
+            items[index].classList.remove('hidden');
+                });
+            });
+        </script>
+
+        <section id="cadastro-franquiado" class="md:flex md:gap-16 md:justify-between md:px-0 px-5 bg-marron-escuro">
+            <div class="md:pl-[135px] md:pt-[126px] md:pb-[139px]">
+                <h5 class="text-[12px] lg:text-[18px] lg:leading-[19.58px] text-marrom-white pb-1 pt-5">Entre em contato</h5>
+                <h3 class="font-bold text-[42px] lg:text-[50px] leading-[46px] lg:leading-[54.4px] text-nude pb-4">Abra sua Franquia</h3>
+                <p class="text-[12px] lg:text-[18px] leading-[14px] lg:leading-[19.2px] pb-7 text-marrom-white">Preencha o formulário abaixo que entraremos em contato com <br>você o mais rápido possível.</p>
+                <div class="flex flex-col gap-2 pb-2">
+                    <div class="flex justify-center items-center gap-2 md:w-[420px] lg:w-[570px] h-[50px] lg:h-[60px] rounded-[5px] bg-nude pl-2">
+                        <div class="flex items-center justify-center rounded-full bg-marrom-nude w-[32px] h-[32px]">
+                            <img src="img.noticias/nome.png" alt="">
+                        </div>
+                        <input type="text" placeholder="Nome e Sobrenome" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio">
+                    </div>
+                    <div class="flex justify-center items-center gap-2  lg:w-[570px] h-[50px] lg:h-[60px] rounded-[5px] bg-nude pl-2">
+                        <div class="flex items-center justify-center rounded-full bg-marrom-nude w-[32px] h-[32px]">
+                            <img src="img.noticias/e-mail.png" alt="">
+                        </div>
+                        <input type="text" placeholder="email@exemplo.com" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio">
+                    </div>
+                    <div class="flex justify-center items-center gap-2  lg:w-[570px] h-[50px] lg:h-[60px] rounded-[5px] bg-nude pl-2">
+                        <div class="flex items-center justify-center rounded-full bg-marrom-nude w-[32px] h-[32px]">
+                            <img src="img.noticias/telefone.png" alt="">
+                        </div>
+                        <input type="text" placeholder="Telefone com DDD" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio">
+                    </div>
+                    <button class="text-[10px] md:text-[16px] font-semibold text-marron-escuro bg-marrom-nude w-full h-[50px] rounded-[5px]">Enviar Cadastro</button>
+                </div>
+            </div>
+            <div class="pb-5 md:pb-0">
+                <img src="img.noticias/Rectangle 25.png" alt="tiamate" class="md:h-full">
+            </div>
         </section>
 
-        <section id="franquia">
-        </section>
-
-        <section id="depoimentos">
+        <section id="depoimentos" class="px-4 md:px-0 py-[60px] md:py-[130px] relative">
+            <h6 class="text-center text-marron-escuro text-[12px] md:text-[18px]">Depoimentos</h6>
+            <h2 class="text-center text-marron-claro text-[24px] md:text-[50px] font-bold">Tudo sobre Tiamate Coffee
+            </h2>
+            <img 
+                class="hidden md:block md:mt-[40px]"
+                src="img.cardapio/bg-depoimentos.png" 
+                alt="rapaz-servindo-café"
+            />
+            <div class="overflow-y-hidden mt-[26px] relative md:absolute bottom-[16px] md:bottom-[196px] right-0 md:w-3/4 md:overflow-hidden">
+                <ul id="carrossel" class="flex w-[calc(calc(100%_*_5)_+_calc(16px_*_4))] md:w-[calc(calc(400px_*_5)_+_calc(40px_*_4))] gap-4 md:gap-[40px] relative duration-200 left-0">
+                    <li class="w-1/3 md:w-[400px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
+                        <div class="estrelas flex gap-[4px] mb-4">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                        </div>
+                        <p class="text-marron-escuro text-[14px] mb-3 w-full">
+                            O café é realmente bom, e os salgados também (pedi um croissant de 4 queijos). Já havia pedido antes via iFood mas resolvi fazer uma visita enquanto andava pelo Centro, o café fica mesmo ao lado da Praça do Ferreira. Vale a pena dar uma visitada quando quiser se refrescar com um café gelado deles ou tomar um café da manhã por lá.
+                        </p>
+                        <div class="flex gap-4 items-center absolute bottom-[32px]">
+                            <img src="img.cardapio/depoimento1.png" alt="Isac Moura">
+                            <h6 class="text-terracota font-semibold">Isac Moura</h6>
+                        </div>
+                    </li>
+                    <li class="w-1/3 md:w-[400px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
+                        <div class="estrelas flex gap-[4px] mb-4">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                        </div>
+                        <p class="text-marron-escuro text-[14px] mb-3 w-full">
+                            Excelente café no Centro da cidade.
+                            Vale a pena uma passará para quem
+                            estiver passando pela região.
+                        </p>
+                        <div class="flex gap-4 items-center absolute bottom-[32px]">
+                            <img src="img.cardapio/depoimento2.png" alt="Eleonora Pereira">
+                            <h6 class="text-terracota font-semibold">Eleonora Pereira</h6>
+                        </div>
+                    </li>
+                    <li class="w-1/3 md:w-[400px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
+                        <div class="estrelas flex gap-[4px] mb-4">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                        </div>
+                        <p class="text-marron-escuro text-[14px] mb-3 w-full">
+                            Ótimo lugar para descansar tomando aquele café, cappuccino, matte, tiamatte...😍 meu refúgio de descanso em meio ao turbulento centro de Fortal City! rs
+                        </p>
+                        <div class="flex gap-4 items-center absolute bottom-[32px]">
+                            <img src="img.cardapio/depoimento3.png" alt="Alkaline Fernandes">
+                            <h6 class="text-terracota font-semibold">Alkaline Fernandes</h6>
+                        </div>
+                    </li>
+                    <li class="w-1/3 md:w-[400px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
+                        <div class="estrelas flex gap-[4px] mb-4">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                        </div>
+                        <p class="text-marron-escuro text-[14px] mb-3 w-full">
+                            Ambiente agradável, limpo, bem arrumado e com ótimas opções de lanche. Mesas organizadas, decoração bonita, atendimento rápido 😍😍😍
+                        </p>
+                        <div class="flex gap-4 items-center absolute bottom-[32px]">
+                            <img src="img.cardapio/depoimento4.png" alt="Rochelly Beviláqua">
+                            <h6 class="text-terracota font-semibold">Rochelly Beviláqua</h6>
+                        </div>
+                    </li>
+                    <li class="w-1/3 md:w-[400px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px]">
+                        <div class="estrelas flex gap-[4px] mb-4">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                        </div>
+                        <p class="text-marron-escuro text-[14px] mb-3 w-full">
+                            Ambiente agradável e uma boa variedade de sabores e apresentações de café. Também os bolos e tortas merecem atenção por combinar muito bem com as bebidas quentes disponíveis na casa. A localização estratégica - bem perto da Praça do Ferreira - permite fácil acesso a pé para quem está no Centro de Fortaleza.
+                        </p>
+                        <div class="flex gap-4 items-center">
+                            <img src="img.cardapio/depoimento5.png" alt="Manoel Costa">
+                            <h6 class="text-terracota font-semibold">Manoel Costa</h6>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="controles hidden absolute right-[60px] md:flex gap-4">
+                <div id="prev" class="w-[45px] h-[45px] bg-marron-claro hover:bg-marron-escuro duration-200 rounded-full flex items-center justify-center relative rotate-180 cursor-pointer">
+                    <div class="w-[12px] h-[2px] bg-white"></div>
+                    <div class="w-[8px] h-[8px] border-r-2 border-r-white border-b-2 border-b-white -rotate-45 absolute top-[(50%_-_8px)] left-[(50%_-_2px)]"></div>
+                </div>
+                <div id="next" class="w-[45px] h-[45px] bg-marron-claro hover:bg-marron-escuro duration-200 rounded-full flex items-center justify-center relative cursor-pointer">
+                    <div class="w-[12px] h-[2px] bg-white"></div>
+                    <div class="w-[8px] h-[8px] border-r-2 border-r-white border-b-2 border-b-white -rotate-45 absolute top-[(50%_-_8px)] left-[(50%_-_2px)]"></div>
+                </div>
+            </div>
         </section>
 
     </main>
 
     <!-- footer -->
-    <footer class="flex flex-col gap-[50.27px] bg-preto-medio text-nude px-[135px] w-full h-[319px]">
-        <div class="flex justify-between items-center  pt-[74px]">
+    <footer class="flex flex-col gap-[50.27px] bg-preto-medio text-nude px-[10px] md:px-[100px] lg:px-[135px] w-full h-[319px]">
+        <div class="flex justify-between items-center  pt-[74px] w-full">
             <div>
-                <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 w-auto">
+                <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 ">
             </div>
-            <div class="flex gap-[45px]">
-                <a href="index.html" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Início</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
+            <div class="flex gap-2 sm:gap-5 md:gap-[45px]">
+                <a href="index.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Início</a>
+                <a href="nosso-cafe.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
                 <a href="noticias.html" class="hover:text-gray-400">Notícias</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Cardápio</a>
-                <a href="#" class="text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Franquia</a>
+                <a href="contato.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>
+                <a href="cardapio.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Cardápio</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Franquia</a>
             </div>
         </div>
         
@@ -96,7 +486,7 @@
         <div class="flex justify-between">
             <div class="flex gap-[34px]">
                 <div>
-                    <p class="font-[Montserrat] text-[14px] leading-[17.07px] font-medium">Curta e <br>Compartilhe</p>
+                    <p class="font-[Montserrat] text-[8px] md:text-[14px] leading-[10px] md:leading-[17.07px] font-medium">Curta e <br>Compartilhe</p>
                 </div>
                 <div class="flex gap-[23.5px]">
                     <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"><img src="img.logo/Group.png"alt=""></a>
@@ -108,7 +498,7 @@
             
             <div class="flex items-center gap-[31px] pb-[71.27px]">
                 <div>
-                    <p class="font-[Montserrat] text-[10px] leading-[12.19px] font-semibold text-mostarda">
+                    <p class="font-[Montserrat] text-[4px] md:text-[10px] leading-[6px] md:leading-[12.19px] font-semibold text-mostarda">
                         © 2024 Tiamate - Todos os Direitos Reservados.
                     </p>
                 </div>
@@ -121,4 +511,21 @@
 
 </body>
 
+<script>
+
+    let c_click = 0;
+    next.onclick = () => {
+        if(c_click < 3){
+            c_click += 1;
+            carrossel.style.left = `-${c_click * 400}px`;
+        }
+    }
+    prev.onclick = () => {
+        if(c_click > 0){
+            c_click -= 1;
+            carrossel.style.left = `-${c_click * 400}px`;
+        }
+    }
+
+</script>
 </html>

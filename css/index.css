@@ -323,3 +323,25 @@
         gap: 88px;
     }
 }
+
+#bebidas{
+    & ul{
+        li:hover .linha{
+            background-color: #C7794A;
+        }
+    }
+}
+
+.carrossel-item2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    & img{
+        width: 118px;
+        height: 117px;
+    }
+    & p{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 56px;
+    }
+}

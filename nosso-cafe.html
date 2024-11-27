@@ -42,20 +42,41 @@
 </head>
 
 <body class="h-dvh">
-    <header class="flex items-center justify-between px-[135px] h-[110px] bg-preto-medio">
-        <img src="img.logo/LogotiaHorizontal.png" alt="tiamatecoffee" class="h-15 w-auto">
-        <nav class="flex justify-between gap-[45px] font-medium text-[18px] leading-[19.58px] text-nude">
-            <a href="index.html">Inicio</a>
-            <a href="nosso-cafe.html">Nosso Café</a>
-            <a href="noticias.html">Notícias</a>
-            <a href="contato.html">Contato</a>
-            <a href="cardapio.html">Cardápio</a>
-          </nav>
-
-            <div class="m-8">
-                <a href="#cadastro-franquiado" class="bg-marrom-nude text-xl px-4 py-2 rounded hover:bg-marron-claro transition text-marron-escuro font-semibold text-[18px] leading-[19.58px]">Seja um Franqueado</a>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img.logo/LogotiaHorizontal.png" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                    <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
             </div>
 
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+                <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+            </ul>
+
+            <div class="login-button">
+                <a href="#cadastro-franqueados">Seja um Franqueado</a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -207,106 +228,105 @@
         </section>
 
 
-        <section id="depoimentos" class="py-12">
+        <section id="depoimentos" class="px-4 md:px-0 py-[60px] md:py-[130px] relative">
 
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-12">
-                    <h3 class="text-sm text-marron-escuro">Depoimentos</h3>
-                    <h1 class="text-3xl font-bold text-marron-claro">Tudo sobre Tiamate Coffee</h1>
-                </div>
-                <div class="absolute">
-                    <img src="img/sobreindex.png" alt="Homem entregando café" class=" w-auto h-80 object-cover">
-                </div>
-                <!-- depoimentos -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Depoimento 1 -->
-                    <div class="bg-cinza rounded-lg shadow-md p-6">
-                        <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
-                        <p class="text-marron-escuro text-sm mb-4">
-                            O café é realmente bom, e os salgados também (peça um croissant do açafrão). Já havia pedido
-                            antes via iFood mas ao resolver visitar uma unidade, a experiência foi ainda melhor. Ótimo
-                            lugar!
-                        </p>
-                        <div class="flex items-center space-x-3">
-                            <img src="img/depoimentos1index.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full">
-                            <span class="text-terracota font-medium text-sm">Kalil Sousa</span>
-                        </div>
-                    </div>
+            <h6 class="text-center text-marron-escuro text-[12px] md:text-[18px]">Depoimentos</h6>
+           <h2 class="text-center text-marron-claro text-[24px] md:text-[50px] font-bold">Tudo sobre Tiamate Coffee
+           </h2>
+           <img class="hidden md:block absolute inset-0 object-cover z-0 md:mt-[40px]"
+               src="img/sobreindex.png" 
+               alt="rapaz-servindo-café"/>
+               <!-- depoimentos -->
+               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+                   <!-- Depoimento 1 -->
+                   <div class="bg-cinza rounded-lg shadow-md p-6">
+                       <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
+                       <p class="text-marron-escuro text-sm mb-4">
+                           O café é realmente bom, e os salgados também (peça um croissant do açafrão). Já havia pedido
+                           antes via iFood mas ao resolver visitar uma unidade, a experiência foi ainda melhor. Ótimo
+                           lugar!
+                       </p>
+                       <div class="flex items-center space-x-3">
+                           <img src="img/depoimentos1index.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full">
+                           <span class="text-terracota font-medium text-sm">Kalil Sousa</span>
+                       </div>
+                   </div>
 
-                    <!-- Depoimento 2 -->
-                    <div class="bg-cinza rounded-lg shadow-md p-6">
-                        <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
-                        <p class="text-marron-escuro text-sm mb-4">
-                            Excelente café no Centro da cidade. Vale a pena uma parada para quem estiver passando pela
-                            região.
-                        </p>
-                        <div class="flex items-center space-x-3">
-                            <img src="img/depoimentos2index.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full">
-                            <span class="text-terracota font-medium text-sm">Flávia Martins</span>
-                        </div>
-                    </div>
+                   <!-- Depoimento 2 -->
+                   <div class="bg-cinza rounded-lg shadow-md p-6">
+                       <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
+                       <p class="text-marron-escuro text-sm mb-4">
+                           Excelente café no Centro da cidade. Vale a pena uma parada para quem estiver passando pela
+                           região.
+                       </p>
+                       <div class="flex items-center space-x-3">
+                           <img src="img/depoimentos2index.png" alt="Kalil Sousa" class="w-10 h-10 rounded-full">
+                           <span class="text-terracota font-medium text-sm">Flávia Martins</span>
+                       </div>
+                   </div>
 
-                    <!-- Depoimento 3 -->
-                    <div class="bg-cinza rounded-lg shadow-md p-6">
-                        <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
-                        <p class="text-marron-escuro text-sm mb-4">
-                            Ótimo lugar para descansar, café, cappuccino, chá, entre outros. Ambiente tranquilo no
-                            centro de Fortaleza!
-                        </p>
-                        <div class="flex items-center space-x-3">
-                            <img src="img/depoimentos3index.png" alt="Pessoa 3" class="w-10 h-10 rounded-full">
-                            <span class="text-terracota font-medium text-sm">Iohana Holanda</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                   <!-- Depoimento 3 -->
+                   <div class="bg-cinza rounded-lg shadow-md p-6">
+                       <img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
+                       <p class="text-marron-escuro text-sm mb-4">
+                           Ótimo lugar para descansar, café, cappuccino, chá, entre outros. Ambiente tranquilo no
+                           centro de Fortaleza!
+                       </p>
+                       <div class="flex items-center space-x-3">
+                           <img src="img/depoimentos3index.png" alt="Pessoa 3" class="w-10 h-10 rounded-full">
+                           <span class="text-terracota font-medium text-sm">Iohana Holanda</span>
+                       </div>
+                   </div>
+               </div>
+           </div>
 
-        </section>
+       </section>
     </main>
     <!-- footer -->
-    <footer class="bg-preto-medio text-nude px-6 lg:px-16 py-10">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Logo e Redes Sociais -->
-            <div class="flex flex-col items-center lg:items-start space-y-4">
-                <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 w-auto">
-                <p class="text-sm">Curta e Compartilhe</p>
-                <div class="flex space-x-4">
-
-                    <!-- Linha divisória -->
-                    <div class="border-t border-mostarda mt-8"></div>
-                    <!-- Ícones de redes sociais -->
-                    <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/" target="_blank"><img
-                            src="img.logo/Group.png" alt=""></a>
-                    <a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png"
-                            alt=""></a>
-                    <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop" target="_blank"><img
-                            src="img.logo/youtube.png" alt=""></a>
-                    <a href="https://br.linkedin.com/company/tiamatecoffee" target="_blank"><img
-                            src="img.logo/linkedin.png" alt=""></a>
+    <footer class="flex flex-col gap-[50.27px] bg-preto-medio text-nude px-[10px] md:px-[100px] lg:px-[135px] w-full h-[319px]">
+        <div class="flex justify-between items-center  pt-[74px] w-full">
+            <div>
+                <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 ">
+            </div>
+            <div class="md:flex gap-[45px]">
+                <a href="index.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Início</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
+                <a href="noticias.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Notícias</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Cardápio</a>
+                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Franquia</a>
+            </div>
+        </div>
+        
+        <div>
+            <hr class="border-marron-claro">
+        </div>
+        
+        <div class="flex justify-between">
+            <div class="flex gap-[34px]">
+                <div>
+                    <p class="font-[Montserrat] text-[8px] md:text-[14px] leading-[10px] md:leading-[17.07px] font-medium">Curta e <br>Compartilhe</p>
                 </div>
-                
+                <div class="flex gap-[23.5px]">
+                    <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"><img src="img.logo/Group.png"alt=""></a>
+                    <a href="https://www.instagram.com/tiamatefortaleza/"><img src="img.logo/Vector.png" alt=""></a>
+                    <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop"><img src="img.logo/youtube.png"alt=""></a>
+                    <a href="https://br.linkedin.com/company/tiamatecoffee"><img src="img.logo/linkedin.png" alt=""></a>
+                </div>
             </div>
-
-            <!-- Menu de Links -->
-            <div class="flex justify-center lg:justify-center space-x-6 lg:space-x-8 text-sm">
-                <a href="index.html" class="hover:text-gray-400">Início</a>
-                <a href="nosso-cafe.html" class="hover:text-gray-400">Nosso Café</a>
-                <a href="noticias.html" class="hover:text-gray-400">Notícias</a>
-                <a href="contato.html" class="hover:text-gray-400">Contato</a>
-                <a href="cardapio.html" class="hover:text-gray-400">Cardápio</a>
-                <a href="#" class="hover:text-gray-400">Franquia</a>
-            </div>
-
-            <!-- Direitos Autorais -->
-            <div class="flex flex-col items-center lg:items-end space-y-4">
-                <p class="text-sm text-mostarda">
-                    © 2024 Tiamate - Todos os Direitos Reservados.
-                </p>
-                <img src="img.logo/logogracom .png" alt="Logo do Grupo de Desenvolvimento" class="h-8 w-auto">
+            
+            <div class="flex items-center gap-[31px] pb-[71.27px]">
+                <div>
+                    <p class="font-[Montserrat] text-[4px] md:text-[10px] leading-[6px] md:leading-[12.19px] font-semibold text-mostarda">
+                        © 2024 Tiamate - Todos os Direitos Reservados.
+                    </p>
+                </div>
+                <div>
+                    <img src="img.logo/logogracom .png" alt="Logo do Grupo de Desenvolvimento" class="h-8 w-auto">
+                </div>
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

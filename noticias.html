@@ -11,7 +11,8 @@
 		<script src="index.js" defer></script>
         <link rel="icon" href="img.logo/logotia.png">
 		<title>Notícias</title>
-		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="css/index.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
 		<script>
 			tailwind.config = {
 				theme: {
@@ -55,7 +56,7 @@
 				},
 			};
 	    </script>
-		<link rel="stylesheet" href="css/index.css" />
+		
 	</head>
 <body>
     <!-- <header class="relative flex items-center justify-between md:px-[135px] md:h-[110px] bg-preto-medio">
@@ -86,7 +87,6 @@
         </div>
     </header> -->
     <header>
-        <header>
             <nav class="nav-bar">
                 <div class="logo">
                     <img src="img.logo/LogotiaHorizontal.png" alt="">
@@ -95,7 +95,7 @@
                     <ul>
                         <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
                         <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
-                        <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+                        <li class="nav-item"><a href="noticias.html" class="nav-link-selecionado">Notícias</a></li>
                         <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
                         <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
                     </ul>
@@ -112,16 +112,15 @@
                 <ul>
                     <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
                     <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
-                    <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link-selecionado">Notícias</a></li>
                     <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
                     <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
                 </ul>
     
                 <div class="login-button">
-                    <a href="#cadastro-franqueados">Seja um Franqueado</a>
+                    <button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
                 </div>
             </div>
-        </header>
     </header>
     <script>
         function menuShow() {
@@ -146,18 +145,18 @@
                 <div class="absolute top-[10px] xl:top-[171px] xl:right-[135px] pl-5">
                     <h1 class="text-[5vw] leadind-[5vw] pl-2 md:text-55-59 font-bold text-nude">Abra sua Franquia <br>Tiamate Coffee.</h1>
                 </div>
-                <div class="w-[30vw] flex gap-5 absolute top-[19vw] pl-2   xl:gap-10 xl:top-[320px] xl:right-[147px] pl-8">
+                <div class="w-[30vw] flex gap-5 absolute top-[19vw] pl-2   xl:gap-10 xl:top-[320px] xl:right-[147px] pl-8 ">
                     <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"  target="_blank"
-                        ><img src="img.logo/Group.png" alt=""  
+                        ><img src="img.logo/Group.png" alt="" class="hover:scale-110"  
                     /></a>
                     <a href="https://www.instagram.com/tiamatefortaleza/"  target="_blank"
-                        ><img src="img.logo/Vector.png" alt=""
+                        ><img src="img.logo/Vector.png" alt="" class="hover:scale-110"
                     /></a>
                     <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop"  target="_blank"
-                        ><img src="img.logo/youtube.png" alt=""
+                        ><img src="img.logo/youtube.png" alt="" class="hover:scale-110"
                     /></a>
                     <a href="https://br.linkedin.com/company/tiamatecoffee"  target="_blank"
-                        ><img src="img.logo/linkedin.png" alt=""
+                        ><img src="img.logo/linkedin.png" alt="" class="hover:scale-110"
                     /></a>
                 </div>
             </div>
@@ -193,8 +192,8 @@
                     </div>
                 </div>
                 <div class="flex gap-[22px] pt-[20px] md:pt-[60px]">
-                    <i id="btn-prev" class='bx bxs-left-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer' ></i>
-                    <i id="btn-next" class='bx bxs-right-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer ' ></i>
+                    <i id="btn-prev" class='bx bxs-left-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer hover:scale-110' ></i>
+                    <i id="btn-next" class='bx bxs-right-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer hover:scale-110 ' ></i>
                 </div>    
             </div>
             <div>
@@ -238,14 +237,14 @@
         <section id="modelos-de-franquias" class="pt-[139px] pb-[164px] px-5 bg-cinza">
             <div class="hidden md:block md:flex gap-[100px] px-[135px]">
                 <div>
-                    <img src="img/franquia 1.png" alt="logo tiamate coffe">
+                    <a href="#galeria-tiamate-coffe"><img src="img/franquia 1.png" alt="logo tiamate coffe" class="hover:scale-110"></a>
                 </div>
                 <div class="flex flex-col gap-[11px] items-center justify-center">
                     <h3 class="text-[18px] leading-[19.58px] text-marron-escuro">A Tiamate oferece 2 modelos <br/>de franquia personalizados.</h3>
                     <h2 class="font-bold text-[50px] leading-[54.4px] text-marron-claro">Escolha a Tiamate <br/>ideal para você</h2>
                 </div>
                 <div>
-                    <img src="img/franquia 2.png" alt="logo tiamate coffe">
+                    <a href="#galeria-tiamate-coffe-to-go"><img src="img/franquia 2.png" alt="logo tiamate coffe" class="hover:scale-110"></a>
                 </div>
             </div>
             <div class="md:hidden flex gap-2 px-5">
@@ -399,7 +398,7 @@
                         <h1 class="text-[4vw] leadind-[5vw] md:text-[44px] lg:text-[50px] leading-[54.4px] font-bold text-nude">Seja um franqueado!</h1>
                     </div>
                     <div>
-                        <button class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro w-[270px] md:w-[570px] h-[60px] rounded-[5px] bg-marrom-nude">Mais Informações</button>
+                        <a href="#cadastro-franquiado"><button class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro w-[270px] md:w-[570px] h-[60px] rounded-[5px] bg-marrom-nude hover:bg-marron-claro hover:scale-110 hover:font-bold">Mais Informações</button></a>
                     </div>
                 </div>
         </section>
@@ -408,12 +407,12 @@
                 <div class="flex flex-col gap-6">
                     <h3 class="font-bold text-[32px] md:text-[44px] xl:text-[50px] leading-[48.4px] md:leading-[48.4px] xl:leading-[54.4px] text-marron-claro ">Diferenciais da Tiamate</h3>
                     <div class="flex justify-between md:grid xl:grid md:grid-cols-4 xl:grid-cols-4 md:gap-[18px] xl:gap-[21px]">
-                        <button id="btn-1" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px]"><img src="img.noticias/lucratividade-logo.png" alt=""></button>
-                        <button id="btn-2" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px]"><img src="img.noticias/frete-logo.png" alt=""></button>
-                        <button id="btn-3" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px]"><img src="img.noticias/desenvolvimento-logo.png" alt=""></button>
-                        <button id="btn-4" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px]"><img src="img.noticias/ponto-comercial-logo.png" alt=""></button>
-                        <button id="btn-5" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px]"><img src="img.noticias/software-logo.png" alt=""></button>
-                        <button id="btn-6" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px]"><img src="img.noticias/equipe-logo.png" alt=""></button>
+                        <button id="btn-1" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px] hover:scale-110"><img src="img.noticias/lucratividade-logo.png" alt=""></button>
+                        <button id="btn-2" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px] hover:scale-110"><img src="img.noticias/frete-logo.png" alt=""></button>
+                        <button id="btn-3" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px] hover:scale-110"><img src="img.noticias/desenvolvimento-logo.png" alt=""></button>
+                        <button id="btn-4" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px] hover:scale-110"><img src="img.noticias/ponto-comercial-logo.png" alt=""></button>
+                        <button id="btn-5" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px] hover:scale-110"><img src="img.noticias/software-logo.png" alt=""></button>
+                        <button id="btn-6" class="botao w-[10%] h-[10%] md:w-[50px] xl:w-[56px] md:h-[50px] xl:h-[56px] hover:scale-110"><img src="img.noticias/equipe-logo.png" alt=""></button>
                     </div>
                 </div>
                 <div class="carrossel pt-20">
@@ -487,7 +486,7 @@
                     <h1 class="text-[5vw] leadind-[5vw] md:text-[50px] leading-[54.4px] font-bold text-nude">sucesso, venha para Tiamte Coffe!</h1>
                 </div>
                 <div>
-                    <button class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro w-[270px] md:w-[570px] h-[60px] rounded-[5px] bg-marrom-nude">Mais Informações</button>
+                    <button class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro w-[270px] md:w-[570px] h-[60px] rounded-[5px] bg-marrom-nude hover:bg-marron-claro hover:font-bold hover:scale-110">Mais Informações</button>
                 </div>
             </div>
         </section>
@@ -510,19 +509,19 @@
                 </div>
                 <div class="flex flex-col gap-10 md:flex md:flex-row md:gap-2 md:justify-between w-full">
                     <div class="flex flex-col gap-[20px]">
-                        <img src="img/primeira-noticia.jpeg" alt="" class="w-[100%] xl:w-[370px] xl:h-[230px] xl:rounded-[5px]">
+                        <a href="https://mais.opovo.com.br/jornal/cidades/2018/10/destaques-inovadores.html" target="_blank"><img src="img/primeira-noticia.jpeg" alt="" class="w-[100%] xl:w-[370px] xl:h-[230px] xl:rounded-[5px]  cursor-pointer hover:scale-105"></a>
                         <h4 class="font-bold text-[16px] md:text-[13px] lg:text-[20px] xl:text-[24px] leading-[20px] lg:leading-[26.11px] text-terracota">Conheça cinco lugares no <br>centro para ir
                             com os amigos</h4>
                         <button class="w-[100%] h-[50px] rounded-[5px] border-2 border-marrom-white text-marrom-white hover:bg-marrom-white hover:font-bold hover:text-marron-escuro"><a href="https://mais.opovo.com.br/jornal/cidades/2018/10/destaques-inovadores.html" target="_blank">Notícia Completa</a></button>
                     </div>
                     <div class="flex flex-col gap-[20px]">
-                        <img src="img/segunda-noticia.jpeg" alt="" class="w-[100%] xl:w-[370px] xl:h-[230px] xl:rounded-[5px]">
+                        <a href="http://grupogracom.com.br/tiamate_moderno.html" target="_blank"><img src="img/segunda-noticia.jpeg" alt="" class="w-[100%] xl:w-[370px] xl:h-[230px] xl:rounded-[5px] cursor-pointer hover:scale-105"></a>
                         <h4 class="font-bold text-[16px] md:text-[13px] lg:text-[20px] xl:text-[24px] leading-[20px] lg:leading-[26.11px] text-terracota">Um gostinho moderno
                             <br>no coração de Fortaleza</h4>
                         <a href="http://grupogracom.com.br/tiamate_moderno.html" target="_blank"><button class="w-[100%] h-[50px] rounded-[5px] border-2 border-marrom-white text-marrom-white hover:bg-marrom-white hover:font-bold hover:text-marron-escuro">Notícia Completa</button></a>
                     </div>
                     <div class="flex flex-col gap-[20px]">
-                        <img src="img/terceira-noticia.jpeg" alt="" class="w-[100%] xl:w-[370px] xl:h-[230px] xl:rounded-[5px]">
+                        <a href="https://atarde.com.br/empregos/cafeteria-de-rua-e-nova-tendencia-de-negocio-em-salvador-927394" target="_blank"><img src="img/terceira-noticia.jpeg" alt="" class="w-[100%] xl:w-[370px] xl:h-[230px] xl:rounded-[5px] cursor-pointer hover:scale-105"></a>
                         <h4 class="font-bold text-[16px] md:text-[13px] lg:text-[20px] xl:text-[24px] leading-[20px] lg:leading-[26.11px] text-terracota">Cafeteria é nova tendência
                             <br>de negócio em Salvador</h4>
                         <a href="https://atarde.com.br/empregos/cafeteria-de-rua-e-nova-tendencia-de-negocio-em-salvador-927394" target="_blank"><button class="w-[100%] h-[50px] rounded-[5px] border-2 border-marrom-white text-marrom-white hover:bg-marrom-white hover:font-bold hover:text-marron-escuro">Notícia Completa</button></a>
@@ -554,7 +553,7 @@
                         </div>
                         <input type="text" placeholder="Telefone com DDD" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio">
                     </div>
-                    <button class="text-[10px] md:text-[16px] font-semibold text-marron-escuro bg-marrom-nude w-full h-[50px] rounded-[5px]">Enviar Cadastro</button>
+                    <button class="text-[10px] md:text-[16px] font-semibold text-marron-escuro bg-marrom-nude w-full h-[50px] rounded-[5px] hover:bg-marron-claro hover:font-bold">Enviar Cadastro</button>
                 </div>
             </div>
             <div class="pb-5 md:pb-0">
@@ -570,10 +569,10 @@
             </div>
             <div class="flex gap-2 sm:gap-5 md:gap-[45px]">
                 <a href="index.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Início</a>
-                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
-                <a href="noticias.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Notícias</a>
-                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>
-                <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Cardápio</a>
+                <a href="nosso-cafe.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
+                <a href="noticias.html" class="text-marron-claro text-[12px] md:text-[18px] leading-[19.58px] font-bold">Notícias</a>
+                <a href="contato.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>
+                <a href="cardapio.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Cardápio</a>
                 <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Franquia</a>
             </div>
         </div>
@@ -588,10 +587,10 @@
                     <p class="font-[Montserrat] text-[8px] md:text-[14px] leading-[10px] md:leading-[17.07px] font-medium">Curta e <br>Compartilhe</p>
                 </div>
                 <div class="flex gap-[23.5px]">
-                    <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"><img src="img.logo/Group.png"alt=""></a>
-                    <a href="https://www.instagram.com/tiamatefortaleza/"><img src="img.logo/Vector.png" alt=""></a>
-                    <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop"><img src="img.logo/youtube.png"alt=""></a>
-                    <a href="https://br.linkedin.com/company/tiamatecoffee"><img src="img.logo/linkedin.png" alt=""></a>
+                    <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/" target="_blank"><img src="img.logo/Group.png"alt="" class="hover:scale-110"></a>
+                    <a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png" alt="" class="hover:scale-110"></a>
+                    <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop" target="_blank"><img src="img.logo/youtube.png"alt="" class="hover:scale-110"></a>
+                    <a href="https://br.linkedin.com/company/tiamatecoffee" target="_blank"><img src="img.logo/linkedin.png" alt="" class="hover:scale-110"></a>
                 </div>
             </div>
             

@@ -32,6 +32,7 @@
                         'nude': '#F5E7DA',
                         'cinza-claro': '#F1F0EA',
                         'cinza': '#E7E1DF',
+                        'marrom-white': '#CF9A5A'
 
                     }
                 }
@@ -42,76 +43,243 @@
 </head>
 
 <body>
-    <header>
-        <nav class="nav-bar">
-            <div class="logo">
-                <img src="img.logo/LogotiaHorizontal.png" alt="">
-            </div>
-            <div class="nav-list">
-                <ul>
-                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
-                    <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
-                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
-                    <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
-                </ul>
-            </div>
-            <div class="login-button">
-                <button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
-            </div>
+    <header class="fixed w-full top-0 z-10 shadow-none">
+		<nav class="nav-bar">
+			<div class="logo">
+				<img src="img.logo/LogotiaHorizontal.png" alt="">
+			</div>
+			<div class="nav-list">
+				<ul>
+					<li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+					<li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+					<li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+					<li class="nav-item"><a href="contato.html" class="nav-link-selecionado">Contato</a></li>
+					<li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+				</ul>
+			</div>
+			<div class="login-button">
+				<button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
+			</div>
 
-            <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="img/img/menu_white_36dp.svg" alt=""></button>
-            </div>
-        </nav>
-        <div class="mobile-menu">
-            <ul>
-                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
-                <li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
-                <li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
-                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
-                <li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
-            </ul>
+			<div class="mobile-menu-icon">
+				<button onclick="menuShow()"><img class="icon" src="img/img/menu_white_36dp.svg" alt=""></button>
+			</div>
+		</nav>
+		<div class="mobile-menu">
+			<ul>
+				<li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+				<li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+				<li class="nav-item"><a href="contato.html" class="nav-link-selecionado">Contato</a></li>
+				<li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+			</ul>
 
-            <div class="login-button">
-                <a href="#cadastro-franqueados">Seja um Franqueado</a>
-            </div>
-        </div>
-    </header>
+			<div class="login-button">
+				<button><a href="#cadastro-franqueados">Seja um Franqueado</a></button>
+			</div>
+		</div>
+	</header>
+	<script>
+        function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu');
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open');
+                document.querySelector('.icon').src = "img/img/menu_white_36dp.svg";
+            } else {
+                menuMobile.classList.add('open');
+                document.querySelector('.icon').src = "img/img/close_white_36dp.svg";
+            }
+        }
+    </script>
 
     <main>
-        <section id="banner">
-            <div class="absolute">
-                <img src="img.contato/baner1.png" alt="Mulher segurando copo de cafe tiamate">
-            </div>
-            <h2 class="text-nude relative px-7 py-6">Depois do café <br>eu me expresso.</h2>
+        <section id="banners" class="w-full">
+			<div class="relative">
+				<img src="img.contato/baner1.png" alt="banner" class="w-full" />
+				<div class="absolute top-[10px] xl:top-[171px] xl:left-[135px]">
+					<h1 class="text-[5vw] leading-[5vw] md:text-55-59 font-bold text-nude"> Depois do café
+                        <br>eu me expresso.</h1>
+				</div>
+				<div class="w-[30vw] flex gap-5 absolute top-[24vw]   xl:gap-10 xl:top-[360px] xl:left-[135px]">
+					<a href="https://www.facebook.com/tiamatecoffeefortalezacentro/" target="_blank"><img
+							src="img.logo/Group.png" alt="" /></a>
+					<a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png"
+							alt="" /></a>
+					<a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop" target="_blank"><img
+							src="img.logo/youtube.png" alt="" /></a>
+					<a href="https://br.linkedin.com/company/tiamatecoffee" target="_blank"><img
+							src="img.logo/linkedin.png" alt="" /></a>
+				</div>
+			</div>
+        </section>
 
-            <div class="flex gap-2 absolute px-4 ">
-                    <a href="https://www.facebook.com/tiamatecoffeefortalezacentro/"  target="_blank"
-                        ><img src="img.logo/Group.png" alt=""  
-                    /></a>
-                    <a href="https://www.instagram.com/tiamatefortaleza/"  target="_blank"
-                        ><img src="img.logo/Vector.png" alt=""
-                    /></a>
-                    <a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop"  target="_blank"
-                        ><img src="img.logo/youtube.png" alt=""
-                    /></a>
-                    <a href="https://br.linkedin.com/company/tiamatecoffee"  target="_blank"
-                        ><img src="img.logo/linkedin.png" alt=""
-                    /></a>
+        <section id="nossas-cafeterias" class=" px-2  pt-[81px] pb-[100px] ml-7">
+            <div class="flex justify-between items-start ">
+                <div class="mb-8">
+                    <h1 class="text-[20px] md:text-3xl font-bold text-marron-claro">Nossas Cafeterias</h1>
                 </div>
-        </section>
-
-        <section id="nossas-cafeterias" class="flex items-center  pt-[81px] pb-[100px] ml-7">
-            <div class=" flex space-x-36">
-                <h1>Nossas cafeterias</h1>
-                <a href="https://www.instagram.com/tiamatefortaleza/"  target="_blank"><img src="img.logo/Vector.png" alt="" />Veja mais</a>
+                <div class="flex md:gap-3 items-center">
+                    <h5 class="text-[12px] md:text-[18px] leading-[21.6px] text-marron-escuro">Veja mais</h5>
+                    <a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png" alt="" class="md:w-[50px] md:h-[50px] hover:scale-105"></a>
+                </div>
             </div>
-            
-            
+            <div class="grid grid-cols-2 xl:flex xl:gap-2 xl:justify-center"> 
+                <img src="img.contato/foto1.png" alt="" class="w-auto">
+                <img src="img.contato/foto2.png" alt="" class="w-auto">
+                <img src="img.contato/foto3.png" alt="" class="w-auto">
+                <img src="img.contato/foto4.png" alt="" class="w-auto">
+                <img src="img.contato/foto5.png" alt="" class="w-auto">
+            </div>
+            <div class="hidden xl:flex xl:justify-center xl:items-center xl:gap-4 xl:pt-[62px] ">
+                <button><div class="rounded-full bg-[#c4c4c4] w-[15px] h-[15px]"></div></button>
+                <button><div class="rounded-full bg-[#c4c4c4] w-[15px] h-[15px]"></div></button>
+                <button><div class="rounded-full bg-[#c4c4c4] w-[15px] h-[15px]"></div></button>
+                <button><div class="rounded-full bg-[#c4c4c4] w-[15px] h-[15px]"></div></button>
+                <button><div class="rounded-full bg-[#c4c4c4] w-[15px] h-[15px]"></div></button>
+            </div> 
         </section>
 
-        <section id="endereco">
+        <section id="endereco" class="px-10 pb-10">
+            <div>
+                <div class="flex flex-col justify-center items-center">
+                    <h5 class="text-[18px] text-marron-escuro">Endereço</h5>
+                    <h3 class="text-[50px] font-bold text-marron-claro">Vem tomar um café</h3>
+                </div>
+                <div class="flex justify-between pt-[96px]">
+                    <div>
+                        <img src="img.contato/local.png" alt="" class="pb-[24px]">
+                        <div class="pb-[28px]">
+                            <h4 class="font-medium text-marrom-white text-[18px]">Unidade</h4>
+                            <h3 class="text-[24px] font-bold text-marron-escuro">Salvador Centro - BA</h3>
+                        </div>
+                        <div>
+                            <hr class="border-cinza rounded-[5px] w-[270px] ">
+                        </div>
+                        <div class=" flex flex-col gap-5 pt-[28px]">
+                            <div class="flex items-start gap-[17px]">
+                                <img src="img.contato/mapa.png" alt="" class="">
+                                <div class="">
+                                    <div class="">
+                                        <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">Endereço:</h5>
+                                        <div>
+                                            <p class="text-[16px] leading-[18px] text-marron-escuro">Shopping Iguatemi Fortaleza</p>
+                                        </div>  
+                                    </div>
+                                    <div class="flex">
+                                        <p>(Loja 68)</p>
+                                        <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">CEP:</h5>
+                                        <P class="text-[16px] leading-[18px] text-marron-escuro">70770-560</P>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-[17px]">
+                                <img src="img.contato/relogio.png" alt="">
+                                <div>
+                                    <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">Horário de Funcionamento:</h5>
+                                    <p class="text-[16px] leading-[18px] text-marron-escuro">Seg a Sex - 8h:00 às 18h:00
+                                        <br>Sáb - 08h:00 às 17h:00
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-[17px]">
+                                <img src="img.contato/contato.png" alt="">
+                                <div class="flex">
+                                    <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">Contato:</h5>
+                                    <p class="text-[16px] leading-[18px] text-marron-escuro">(85)99691 - 7642</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="img.contato/local.png" alt="" class="pb-[24px]">
+                        <div class="pb-[28px]">
+                            <h4 class="font-medium text-marrom-white text-[18px]">Unidade</h4>
+                            <h3 class="text-[24px] font-bold text-marron-escuro">Salvador Centro - BA</h3>
+                        </div>
+                        <div>
+                            <hr class="border-cinza rounded-[5px] w-[270px] ">
+                        </div>
+                        <div class=" flex flex-col gap-5 pt-[28px]">
+                            <div class="flex items-start gap-[17px]">
+                                <img src="img.contato/mapa.png" alt="" class="">
+                                <div class="">
+                                    <div class="">
+                                        <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">Endereço:</h5>
+                                        <div>
+                                            <p class="text-[16px] leading-[18px] text-marron-escuro">Shopping Iguatemi Fortaleza</p>
+                                        </div>  
+                                    </div>
+                                    <div class="flex">
+                                        <p>(Loja 68)</p>
+                                        <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">CEP:</h5>
+                                        <P class="text-[16px] leading-[18px] text-marron-escuro">70770-560</P>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-[17px]">
+                                <img src="img.contato/relogio.png" alt="">
+                                <div>
+                                    <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">Horário de Funcionamento:</h5>
+                                    <p class="text-[16px] leading-[18px] text-marron-escuro">Seg a Sex - 8h:00 às 18h:00
+                                        <br>Sáb - 08h:00 às 17h:00
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-[17px]">
+                                <img src="img.contato/contato.png" alt="">
+                                <div class="flex">
+                                    <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">Contato:</h5>
+                                    <p class="text-[16px] leading-[18px] text-marron-escuro">(85)99691 - 7642</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="img.contato/local.png" alt="" class="pb-[24px]">
+                        <div class="pb-[28px]">
+                            <h4 class="font-medium text-marrom-white text-[18px]">Unidade</h4>
+                            <h3 class="text-[24px] font-bold text-marron-escuro">Salvador Centro - BA</h3>
+                        </div>
+                        <div>
+                            <hr class="border-cinza rounded-[5px] w-[270px] ">
+                        </div>
+                        <div class=" flex flex-col gap-5 pt-[28px]">
+                            <div class="flex items-start gap-[17px]">
+                                <img src="img.contato/mapa.png" alt="" class="">
+                                <div class="">
+                                    <div class="">
+                                        <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">Endereço:</h5>
+                                        <div>
+                                            <p class="text-[16px] leading-[18px] text-marron-escuro">Shopping Iguatemi Fortaleza</p>
+                                        </div>  
+                                    </div>
+                                    <div class="flex">
+                                        <p>(Loja 68)</p>
+                                        <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">CEP:</h5>
+                                        <P class="text-[16px] leading-[18px] text-marron-escuro">70770-560</P>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-[17px]">
+                                <img src="img.contato/relogio.png" alt="">
+                                <div>
+                                    <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">Horário de Funcionamento:</h5>
+                                    <p class="text-[16px] leading-[18px] text-marron-escuro">Seg a Sex - 8h:00 às 18h:00
+                                        <br>Sáb - 08h:00 às 17h:00
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-[17px]">
+                                <img src="img.contato/contato.png" alt="">
+                                <div class="flex">
+                                    <h5 class="font-bold text-[16px] leading-[18px] text-marron-claro">Contato:</h5>
+                                    <p class="text-[16px] leading-[18px] text-marron-escuro">(85)99691 - 7642</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="duvidas">

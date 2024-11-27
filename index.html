@@ -43,14 +43,14 @@
 </head>
 
 <body class="h-dvh">
-	<header>
+	<header class="fixed w-full top-0 z-10 shadow-none">
 		<nav class="nav-bar">
 			<div class="logo">
 				<img src="img.logo/LogotiaHorizontal.png" alt="">
 			</div>
 			<div class="nav-list">
 				<ul>
-					<li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+					<li class="nav-item"><a href="index.html" class="nav-link-selecionado">Início</a></li>
 					<li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
 					<li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
 					<li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
@@ -67,7 +67,7 @@
 		</nav>
 		<div class="mobile-menu">
 			<ul>
-				<li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+				<li class="nav-item"><a href="index.html" class="nav-link-selecionado">Início</a></li>
 				<li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
 				<li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
 				<li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
@@ -75,10 +75,22 @@
 			</ul>
 
 			<div class="login-button">
-				<a href="#cadastro-franqueados">Seja um Franqueado</a>
+				<button><a href="#cadastro-franqueados">Seja um Franqueado</a></button>
 			</div>
 		</div>
 	</header>
+	<script>
+        function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu');
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open');
+                document.querySelector('.icon').src = "img/img/menu_white_36dp.svg";
+            } else {
+                menuMobile.classList.add('open');
+                document.querySelector('.icon').src = "img/img/close_white_36dp.svg";
+            }
+        }
+    </script>
 
 	<main class="">
 		<section id="banners" class="w-full">
@@ -91,13 +103,13 @@
 				</div>
 				<div class="w-[30vw] flex gap-5 absolute top-[24vw]   xl:gap-10 xl:top-[360px] xl:left-[135px]">
 					<a href="https://www.facebook.com/tiamatecoffeefortalezacentro/" target="_blank"><img
-							src="img.logo/Group.png" alt="" /></a>
+							src="img.logo/Group.png" alt="" class="hover:scale-110" /></a>
 					<a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png"
-							alt="" /></a>
+							alt="" class="hover:scale-110" /></a>
 					<a href="https://www.youtube.com/@tiamatecoffee4949?app=desktop" target="_blank"><img
-							src="img.logo/youtube.png" alt="" /></a>
+							src="img.logo/youtube.png" alt="" class="hover:scale-110" /></a>
 					<a href="https://br.linkedin.com/company/tiamatecoffee" target="_blank"><img
-							src="img.logo/linkedin.png" alt="" /></a>
+							src="img.logo/linkedin.png" alt="" class="hover:scale-110" /></a>
 				</div>
 			</div>
 
@@ -175,7 +187,7 @@
 			</div>
 		</section>
 		<section id="video-cafe" class="pt-36 pb-36 sm:px-[135px]">
-			<h2 class="font-bold text-50-54 text-marron-claro pb-22">
+			<h2 class="font-bold text-[30px] sm:text-50-54 text-marron-claro pb-22">
 				Coisas boas acontecem àqueles <br />que gostam de café
 			</h2>
 			<video class="w-full" id="myVideo" controls="false" poster="img/video.png">
@@ -187,31 +199,35 @@
 		<section id="banner-secundario" class="w-full">
 			<div class="relative">
 				<img src="./img/banner_sec - Index.png" alt="banner-secundario" class="w-full" />
-				<div class="absolute top-[171px] w-[445px] left-[135px]">
-					<h3 class="text-marron-claro text-[5vw] leading-[5vw] md:text-55-59 font-bold">
+				<div class="absolute top-4 sm:top-[171px] w-[445px] left-[135px]">
+					<h3 class="text-marron-claro text-[2vw] sm:text-[5vw] sm:leading-[5vw] md:text-55-59 font-bold">
 						Café Autêntico
 					</h3>
-					<p class="text-nude text-[5vw] leading-[5vw] md:text-55-59 font-bold">
+					<p class="text-nude text-[2vw] sm:text-[5vw] sm:leading-[5vw] md:text-55-59 font-bold">
 						Chegou nosso café! Direto da fazenda.
 					</p>
 				</div>
 			</div>
 		</section>
 
-		<section id="galeria" class="py-8">
-			<div class="max-w-6xl mx-auto px-4">
+		<section id="galeria" class="pt-4 relative">
+			<div class="max-w-6xl mx-auto px-4 relative bottom-[-153px]">
 				<!-- Título e link -->
-				<div class="mb-8">
-					<span class=" flex flex-row-reverse text-xs text-preto-medio"> Veja mais <a
+				<div class="flex flex-row-reverse justify-between items-center ">
+					<div class="flex gap-3 items-center">
+					<!-- <span class=" flex flex-row-reverse text-xs text-preto-medio"> Veja mais <a
 							href="https://www.instagram.com/tiamatefortaleza/" target="_blank" class="mb-2"> <img
-								src="img.logo/Vector.png" alt="link instagram" class="w-8 h-8"></a> </span>
-
-
-					<h3 class="text-sm text-preto-medio">Para você e seus amigos</h3>
-					<h1 class="text-3xl font-bold text-marron-claro">Ambiente agradável</h1>
+								src="img.logo/Vector.png" alt="link instagram" class="w-8 h-8"></a> </span> -->
+						<h5 class="text-[18px] leading-[21.6px] text-marron-escuro">Veja mais</h5>
+						<a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png" alt="" class="md:w-[50px] md:h-[50px] hover:scale-105"></a>
+					</div>
+					<div class="mb-8">
+						<h3 class="text-sm text-preto-medio">Para você e seus amigos</h3>
+						<h1 class="text-3xl font-bold text-marron-claro">Ambiente agradável</h1>
+					</div>
 				</div>
 				<!-- Galeria de imagens -->
-				<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+				<ul class="flex flex-col justify-center items-center sm:grid sm:grid-cols-2 md:grid md:grid-cols-3">
 					<li><img src="img/foto1 index.png" alt="moça curtindo seu café numa mesa"></li>
 					<li><img src="img/foto2 index.png" alt="rapaz de óculos sorrindo "></li>
 					<li><img src="img/foto3 index.png" alt="moça tomando um frapê"></li>
@@ -221,9 +237,10 @@
 
 				</ul>
 			</div>
+			<div class="w-full h-[153px] bg-cinza -z-10"></div>
 		</section>
 
-		<section id="cardapio-carrossel"
+		<!-- <section id="cardapio-carrossel"
 			class="cardapio-carrossel w-full h-[50dvw] text-center overflow-hidden relative px-[135px]">
 			<div class="slider absolute w-[240px] aspect-[4/5] top-[10%] left-[calc(50%-120px)] [transform-style:preserve-3d] [transform:perspective(1000px)] animate-spinLatte z-[2]"
 				style="--quantity: 3">
@@ -250,9 +267,13 @@
 			<button class="bg-marron-claro hover:bg-terracota group duration-200 h-[60px] w-[304px] mt-[600px] rounded-md">
 				<a class="w-full h-full text-[18px] leading-5 font-semibold duration-200 text-marron-escuro group-hover:text-nude" href="/cardapio.html">Ver Mais</a>
 			</button>
-		</section>
-		<section class="pt-10 pb-10">
-			<div  class="flex w-[602px] h-[300px] overflow-y-hidden overflow-x-hidden relative left-[470px] pb-9 pt-9 duration-200 ">
+		</section> -->
+		<section id="cardapio-carrossel2" class="pt-10 pb-10 bg-cinza hidden sm:block">
+			<div class="flex flex-col gap-3 justify-center items-center">
+				<h5 class="text-[18px] leading-[19.58px] text-marron-escuro md:pt-[93px]">Confira nosso</h5>
+				<h2 class="font-bold text-[50px] leading-[54.4px] text-marron-claro">Cardápio</h2>
+			</div>
+			<div  class="flex w-[602px] h-[300px] overflow-y-hidden overflow-x-hidden relative md:left-[150px] lg:left-[300px]  xl:left-[470px] 2xl:left-[470px] pb-9 pt-9 duration-200 ">
 				<div id="bebidas" class="flex gap-4 relative ">
 					<div class="w-[190px] h-[280px]">
 						<img src="img/bebidas/Bebidas-01.png" alt="">
@@ -420,6 +441,131 @@
 		</section>
 
 		<section id="depoimentos" class="px-4 md:px-0 py-[60px] md:py-[130px] relative">
+            <h6 class="text-center text-marron-escuro text-[12px] md:text-[18px]">Depoimentos</h6>
+            <h2 class="text-center text-marron-claro text-[24px] md:text-[50px] font-bold">Tudo sobre Tiamate Coffee
+            </h2>
+            <img 
+                class="hidden md:block md:mt-[40px]"
+                src="img.cardapio/bg-depoimentos.png" 
+                alt="rapaz-servindo-café"
+            />
+            <div class="overflow-y-hidden mt-[26px] relative md:absolute bottom-[16px] md:bottom-[196px] right-0 md:w-3/4 md:overflow-hidden">
+                <ul id="carrosseldepoimentos" class="flex w-[calc(calc(100%_*_5)_+_calc(16px_*_4))] md:w-[calc(calc(400px_*_5)_+_calc(40px_*_4))] gap-4 md:gap-[40px] relative duration-200 left-0">
+                    <li class="w-1/3 md:w-[400px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
+                        <div class="estrelas flex gap-[4px] mb-4">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                        </div>
+                        <p class="text-marron-escuro text-[14px] mb-3 w-full">
+                            O café é realmente bom, e os salgados também (pedi um croissant de 4 queijos). Já havia pedido antes via iFood mas resolvi fazer uma visita enquanto andava pelo Centro, o café fica mesmo ao lado da Praça do Ferreira. Vale a pena dar uma visitada quando quiser se refrescar com um café gelado deles ou tomar um café da manhã por lá.
+                        </p>
+                        <div class="flex gap-4 items-center absolute bottom-[32px]">
+                            <img src="img.cardapio/depoimento1.png" alt="Isac Moura">
+                            <h6 class="text-terracota font-semibold">Isac Moura</h6>
+                        </div>
+                    </li>
+                    <li class="w-1/3 md:w-[400px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
+                        <div class="estrelas flex gap-[4px] mb-4">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                        </div>
+                        <p class="text-marron-escuro text-[14px] mb-3 w-full">
+                            Excelente café no Centro da cidade.
+                            Vale a pena uma passará para quem
+                            estiver passando pela região.
+                        </p>
+                        <div class="flex gap-4 items-center absolute bottom-[32px]">
+                            <img src="img.cardapio/depoimento2.png" alt="Eleonora Pereira">
+                            <h6 class="text-terracota font-semibold">Eleonora Pereira</h6>
+                        </div>
+                    </li>
+                    <li class="w-1/3 md:w-[400px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
+                        <div class="estrelas flex gap-[4px] mb-4">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                        </div>
+                        <p class="text-marron-escuro text-[14px] mb-3 w-full">
+                            Ótimo lugar para descansar tomando aquele café, cappuccino, matte, tiamatte...😍 meu refúgio de descanso em meio ao turbulento centro de Fortal City! rs
+                        </p>
+                        <div class="flex gap-4 items-center absolute bottom-[32px]">
+                            <img src="img.cardapio/depoimento3.png" alt="Alkaline Fernandes">
+                            <h6 class="text-terracota font-semibold">Alkaline Fernandes</h6>
+                        </div>
+                    </li>
+                    <li class="w-1/3 md:w-[400px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
+                        <div class="estrelas flex gap-[4px] mb-4">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                        </div>
+                        <p class="text-marron-escuro text-[14px] mb-3 w-full">
+                            Ambiente agradável, limpo, bem arrumado e com ótimas opções de lanche. Mesas organizadas, decoração bonita, atendimento rápido 😍😍😍
+                        </p>
+                        <div class="flex gap-4 items-center absolute bottom-[32px]">
+                            <img src="img.cardapio/depoimento4.png" alt="Rochelly Beviláqua">
+                            <h6 class="text-terracota font-semibold">Rochelly Beviláqua</h6>
+                        </div>
+                    </li>
+                    <li class="w-1/3 md:w-[400px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px]">
+                        <div class="estrelas flex gap-[4px] mb-4">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                            <img src="img.cardapio/icon_star.png" alt="estrela">
+                        </div>
+                        <p class="text-marron-escuro text-[14px] mb-3 w-full">
+                            Ambiente agradável e uma boa variedade de sabores e apresentações de café. Também os bolos e tortas merecem atenção por combinar muito bem com as bebidas quentes disponíveis na casa. A localização estratégica - bem perto da Praça do Ferreira - permite fácil acesso a pé para quem está no Centro de Fortaleza.
+                        </p>
+                        <div class="flex gap-4 items-center">
+                            <img src="img.cardapio/depoimento5.png" alt="Manoel Costa">
+                            <h6 class="text-terracota font-semibold">Manoel Costa</h6>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="controles hidden absolute right-[60px] md:flex gap-4">
+                <div id="prevs" class="w-[45px] h-[45px] bg-marron-claro hover:bg-marron-escuro duration-200 rounded-full flex items-center justify-center relative rotate-180 cursor-pointer">
+                    <div class="w-[12px] h-[2px] bg-white"></div>
+                    <div class="w-[8px] h-[8px] border-r-2 border-r-white border-b-2 border-b-white -rotate-45 absolute top-[(50%_-_8px)] left-[(50%_-_2px)]"></div>
+                </div>
+                <div id="nexts" class="w-[45px] h-[45px] bg-marron-claro hover:bg-marron-escuro duration-200 rounded-full flex items-center justify-center relative cursor-pointer">
+                    <div class="w-[12px] h-[2px] bg-white"></div>
+                    <div class="w-[8px] h-[8px] border-r-2 border-r-white border-b-2 border-b-white -rotate-45 absolute top-[(50%_-_8px)] left-[(50%_-_2px)]"></div>
+                </div>
+            </div>
+			<script>
+
+				let c_clicks = 0;
+				nexts.onclick = () => {
+					if(c_clicks < 3){
+						c_clicks += 1;
+						carrosseldepoimentos.style.left = `-${c_clicks * 400}px`;
+					}
+				}
+				prevs.onclick = () => {
+					if(c_clicks > 0){
+						c_clicks -= 1;
+						carrosseldepoimentos.style.left = `-${c_clicks * 400}px`;
+					}
+				}
+			
+			</script>
+		
+		</section>
+
+		<!-- <section id="depoimentos" class="px-4 md:px-0 py-[60px] md:py-[130px] relative">
 
 			 <h6 class="text-center text-marron-escuro text-[12px] md:text-[18px]">Depoimentos</h6>
             <h2 class="text-center text-marron-claro text-[24px] md:text-[50px] font-bold relative z-10">Tudo sobre Tiamate Coffee
@@ -427,9 +573,9 @@
 			<img class="hidden md:block absolute inset-0  z-0 md:mt-[40px]"
                 src="img/sobreindex.png" 
                 alt="rapaz-servindo-café"/>
-				<!-- depoimentos -->
+				depoimentos
 				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
-					<!-- Depoimento 1 -->
+					Depoimento 1
 					<div class="bg-cinza rounded-lg shadow-md p-6">
 						<img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
 						<p class="text-marron-escuro text-sm mb-4">
@@ -443,7 +589,7 @@
 						</div>
 					</div>
 
-					<!-- Depoimento 2 -->
+					Depoimento 2
 					<div class="bg-cinza rounded-lg shadow-md p-6">
 						<img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
 						<p class="text-marron-escuro text-sm mb-4">
@@ -456,7 +602,7 @@
 						</div>
 					</div>
 
-					<!-- Depoimento 3 -->
+					Depoimento 3
 					<div class="bg-cinza rounded-lg shadow-md p-6">
 						<img src="img/estrelas index.png" alt="Avaliação 5 estrelas" class="mb-4">
 						<p class="text-marron-escuro text-sm mb-4">
@@ -471,7 +617,7 @@
 				</div>
 			</div>
 
-		</section>
+		</section> -->
 	</main>
 	<!-- footer -->
 	<footer class="flex flex-col gap-[50.27px] bg-preto-medio text-nude px-[10px] md:px-[100px] lg:px-[135px] w-full h-[319px]">
@@ -519,5 +665,7 @@
         </div>
     </footer>
 </body>
+
+
 
 </html>

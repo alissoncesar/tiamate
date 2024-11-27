@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="index.js" defer></script>
 	<link rel="icon" href="img.logo/logotia.png">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 	<title>Bem vindo a Tiamate</title>
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script>
@@ -241,10 +242,77 @@
 			</div>
 
 			<button class="bg-marron-claro hover:bg-terracota group duration-200 h-[60px] w-[304px] mt-[600px] rounded-md">
-				<a class="w-full h-full text-[18px] leading-5 font-semibold duration-200 text-marron-escuro group-hover:text-nude" href="./cardapio.html">Ver Mais</a>
+				<a class="w-full h-full text-[18px] leading-5 font-semibold duration-200 text-marron-escuro group-hover:text-nude" href="/cardapio.html">Ver Mais</a>
 			</button>
-			
 		</section>
+		<section class="pt-10 pb-10">
+			<div  class="flex w-[602px] h-[300px] overflow-y-hidden overflow-x-hidden relative left-[470px] pb-9 pt-9 duration-200 ">
+				<div id="bebidas" class="flex gap-4 relative ">
+					<div class="w-[190px] h-[280px]">
+						<img src="img/bebidas/Bebidas-01.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-02.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-03.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-04.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-05.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-06.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-07.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-09.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-10.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-11.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-12.png" alt="">
+					</div>
+					<div class="w-[190px] h-[278px]">
+						<img src="img/bebidas/Bebidas-13.png" alt="">
+					</div>
+				</div>
+	
+				<div id="prev" class="absolute left-[5px] bottom-24 cursor-pointer">
+					<i class='bx bx-left-arrow-alt' ></i>
+				</div>
+				<div id="next" class="absolute right-[20px] bottom-24 cursor-pointer">
+					<i class='bx bx-right-arrow-alt' ></i>
+				</div>
+			</div>
+		</section>
+
+		<script>
+
+			let c_click = 0;
+			const totalSlides = 10; // Substitua 5 pelo número total de slides
+			
+			next.onclick = () => {
+				c_click = (c_click + 1) % totalSlides; // Incrementa c_click e aplica o módulo para manter dentro do limite
+				bebidas.style.left = `-${c_click * 206}px`;
+			};
+			
+			prev.onclick = () => {
+				c_click = (c_click - 1 + totalSlides) % totalSlides; // Decrementa c_click e aplica o módulo com ajuste para evitar valores negativos
+				bebidas.style.left = `-${c_click * 206}px`;
+			};
+			
+			</script>
+			
+		
 		<!--cadastro franquia -->
 		<section id="cadastro-franquiado" class="py-12 bg-marron-escuro">
 			<div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">

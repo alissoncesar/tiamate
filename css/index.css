@@ -230,12 +230,38 @@
     font-weight: 400;
 }
 
+.nav-link:hover{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color:#A97744;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color 0.1s ease-in-out;
+}
+
+.nav-link-selecionado {
+    font-size: 1.15rem;
+    color: #C7794A;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
 .login-button button {
     border: none;
     border-radius: 5px;
     background-color: #C7794A;
     width: 220px;
     height: 52px;
+}
+
+.login-button button:hover {
+    border: none;
+    border-radius: 5px;
+    background-color: #A97744;
+    width: 220px;
+    height: 52px;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .login-button button a {

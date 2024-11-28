@@ -33,6 +33,7 @@
 						'nude': '#F5E7DA',
 						'cinza-claro': '#F1F0EA',
 						'cinza': '#E7E1DF',
+						'marrom-white': '#CF9A5A'
 
 					}
 				}
@@ -75,7 +76,7 @@
 			</ul>
 
 			<div class="login-button">
-				<button><a href="#cadastro-franqueados">Seja um Franqueado</a></button>
+				<button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
 			</div>
 		</div>
 	</header>
@@ -338,13 +339,106 @@
 			};
 			
 			</script>
+		
+
+		<section id="cadastro-franquiado" class="md:flex md:gap-16 md:justify-between md:px-0 px-5 bg-marron-escuro">
+            <div class="md:pl-[135px] md:pt-[126px] md:pb-[139px]">
+                <h5 class="text-[12px] lg:text-[18px] lg:leading-[19.58px] text-marrom-white pb-1 pt-5">Entre em contato</h5>
+                <h3 class="font-bold text-[42px] lg:text-[50px] leading-[46px] lg:leading-[54.4px] text-nude pb-4">Abra sua Franquia</h3>
+                <p class="text-[12px] lg:text-[18px] leading-[14px] lg:leading-[19.2px] pb-7 text-marrom-white">Preencha o formulário abaixo que entraremos em contato com <br>você o mais rápido possível.</p>
+                <div class="flex flex-col gap-2 pb-2">
+                    <div class="flex justify-center items-center gap-2 md:w-[420px] lg:w-[570px] h-[50px] lg:h-[60px] rounded-[5px] bg-nude pl-2">
+                        <div class="flex items-center justify-center rounded-full bg-marrom-nude w-[32px] h-[32px]">
+                            <img src="img.noticias/nome.png" alt="">
+                        </div>
+                        <input type="text" placeholder="Nome e Sobrenome" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio">
+                    </div>
+                    <div class="flex justify-center items-center gap-2  lg:w-[570px] h-[50px] lg:h-[60px] rounded-[5px] bg-nude pl-2">
+                        <div class="flex items-center justify-center rounded-full bg-marrom-nude w-[32px] h-[32px]">
+                            <img src="img.noticias/e-mail.png" alt="">
+                        </div>
+                        <input type="text" placeholder="email@exemplo.com" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio">
+                    </div>
+                    <div class="flex justify-center items-center gap-2  lg:w-[570px] h-[50px] lg:h-[60px] rounded-[5px] bg-nude pl-2">
+                        <div class="flex items-center justify-center rounded-full bg-marrom-nude w-[32px] h-[32px]">
+                            <img src="img.noticias/telefone.png" alt="">
+                        </div>
+                        <input type="text" placeholder="Telefone com DDD" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio">
+                    </div>
+					<div class="flex gap-3">
+						<div class="flex justify-center items-center gap-2  lg:w-[251px] h-[50px] lg:h-[60px] rounded-[5px] bg-nude pl-2">
+							<div class="flex items-center justify-center rounded-full bg-marrom-nude w-[32px] h-[32px]">
+								<img src="img/localizacao.png" alt="">
+							</div>
+							<!-- <input type="text" placeholder="UF" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio"> -->
+										<label for="UF"></label>
+										<select name="" id="uf" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio">
+										<option value="">UF</option>
+										<option value="AC">Acre</option>
+										<option value="AL">Alagoas</option>
+										<option value="AP">Amapá</option>
+										<option value="AM">Amazonas</option>
+										<option value="BA">Bahia</option>
+										<option value="CE">Ceará</option>
+										<option value="DF">Distrito Federal</option>
+										<option value="ES">Espírito Santo</option>
+										<option value="GO">Goiás</option>
+										<option value="MA">Maranhão</option>
+										<option value="MT">Mato Grosso</option>
+										<option value="MS">Mato Grosso do Sul</option>
+										<option value="MG">Minas Gerais</option>
+										<option value="PA">Pará</option>
+										<option value="PB">Paraíba</option>
+										<option value="PR">Paraná</option>
+										<option value="PE">Pernambuco</option>
+										<option value="PI">Piauí</option>
+										<option value="RJ">Rio de Janeiro</option>
+										<option value="RN">Rio Grande do Norte</option>
+										<option value="RS">Rio Grande do Sul</option>
+										<option value="RO">Rondônia</option>
+										<option value="RR">Roraima</option>
+										<option value="SC">Santa Catarina</option>
+										<option value="SP">São Paulo</option>
+										<option value="SE">Sergipe</option>
+										<option value="TO">Tocantins</option></select>
+						</div>
+						<div class="flex justify-center items-center w-full gap-2  lg:w-[307px] h-[50px] lg:h-[60px] rounded-[5px] bg-nude pl-2">
+							<div class="flex items-center justify-center rounded-full bg-marrom-nude w-[32px] h-[32px]">
+								<img src="img/cidade.png" alt="">
+							</div>
+							<input type="text" placeholder="Cidade" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio">
+						</div>
+					</div>
+					<div class="flex justify-center items-center gap-2  lg:w-[570px] h-[50px] lg:h-[60px] rounded-[5px] bg-nude pl-2">
+                        <div class="flex items-center justify-center rounded-full bg-marrom-nude w-[32px] h-[32px]">
+                            <img src="img/como-conheceu.png" alt="">
+                        </div>
+                        <!-- <input type="text" placeholder="Como conheceu a Tiamate?" class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio"> -->
+						<label for="referencia" class="block text-sm font-medium"></label>
+						<select id="referencia" name="referencia"
+						class="bg-transparent w-full text-[10px] md:text-[16px] leading-[19.2px] placeholder-preto-medio">
+
+							<option value="">Como conheceu a Tiamate?</option>
+							<option value="internet">Instagram</option>
+							<option value="amigos">Amigos</option>
+							<option value="outros">Google</option>
+							<option value="outros">Outros</option>
+						</select>
+                    </div>
+                    <button class="text-[10px] md:text-[16px] font-semibold text-marron-escuro bg-marrom-nude w-full h-[50px] rounded-[5px] hover:bg-marron-claro hover:font-bold">Enviar Cadastro</button>
+                </div>
+            </div>
+            <div class="pb-5 md:pb-0">
+                <img src="img.noticias/Rectangle 25.png" alt="tiamate" class="md:h-full">
+            </div>
+        </section>
 			
 		
-		<!--cadastro franquia -->
+		<!-- cadastro franquia
 		<section id="cadastro-franquiado" class="py-12 bg-marron-escuro">
 			<div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
 				<div class="grid grid-cols-1 lg:grid-cols-2  items-center">
-					<!-- Lado esquerdo: Formulário -->
+					Lado esquerdo: Formulário
 					<div class="text-nude p-8 rounded-lg shadow-md">
 						<h2 class="text-marron-claro">Entre em contato</h2>
 						<h1 class="text-3xl font-bold mb-4">Abra sua Franquia</h1>
@@ -402,7 +496,7 @@
 										<option value="SP">São Paulo</option>
 										<option value="SE">Sergipe</option>
 										<option value="TO">Tocantins</option>
-									  </select>
+									</select>
 								</div>
 								<div>
 									<label for="cidade" class="block text-sm font-medium"></label>
@@ -430,7 +524,7 @@
 						</form>
 					</div>
 
-					<!-- Lado direito: Imagem -->
+					Lado direito: Imagem
 					<div class="overflow-hidden shadow-md">
 						<img src="img/banner franquia.png" alt="Imagem do Tiamate Coffee"
 							class="w-full h-full object-cover" />
@@ -438,7 +532,7 @@
 				</div>
 			</div>
 
-		</section>
+		</section> -->
 
 		<section id="depoimentos" class="px-4 md:px-0 py-[60px] md:py-[130px] relative">
             <h6 class="text-center text-marron-escuro text-[12px] md:text-[18px]">Depoimentos</h6>
@@ -626,7 +720,7 @@
                 <img src="img.logo/LogotiaHorizontal.png" alt="Logo Tiamate Coffee" class="h-12 ">
             </div>
             <div class="md:flex gap-[45px]">
-                <a href="index.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Início</a>
+                <a href="index.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium text-marron-claro">Início</a>
                 <a href="nosso-cafe.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Nosso Café</a>
                 <a href="noticias.html" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Notícias</a>
                 <a href="#" class="text-[12px] md:text-[18px] leading-[19.58px] font-medium hover:text-gray-400">Contato</a>

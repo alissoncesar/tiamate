@@ -1,204 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-		<script src="index.js" defer></script>
-        <link rel="icon" href="img.logo/logotia.png">
-		<title>Notícias</title>
-		<link rel="stylesheet" href="css/index.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-		<script>
-			tailwind.config = {
-				theme: {
-					extend: {
-						keyframes: {
-							autoRun: {
-								from: {
-									transform: 'perspective(1000px) rotateX(-16deg) rotateY(0deg)'
-								},
-								to:{
-									transform: 'perspective(1000px) rotateX(-16deg) rotateY(360deg)'
-								}
-							}
-						},
-						animation: {
-							spinLatte: 'autoRun 15s linear infinite'
-						},
-						spacing: {
-							34: "135px",
-							22: "83px",
-						},
-						fontSize: {
-							base: ["16px", "19.2px"],
-							"24-26": ["24px", "26.11px"],
-							"50-54": ["50px", "54.4px"],
-							"55-59": ["55px", "59.84px"],
-						},
-						colors: {
-							'terracota': '#64221D',  
-                            'mostarda': '#F7AE1A',
-                            'preto-medio': '#292625',
-                            'marron-escuro': '#3B2416',
-                            'marrom-nude' : '#C7794A',
-                            'marron-claro': '#A97744',
-                            'nude': '#F5E7DA',
-                            'cinza-claro': '#F1F0EA',
-                            'cinza': '#E7E1DF',
-                            'marrom-white': '#CF9A5A'
-						},
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="index.js" defer></script>
+	<link rel="icon" href="img.logo/logotia.png">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<title>Bem vindo a Tiamate</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					spacing: {
+						'34': '135px',
+						'22': '83px',
 					},
-				},
-			};
-	    </script>
-		
-	</head>
+					fontSize: {
+						'base': ['16px', '19.2px'],
+						'24-26': ['24px', '26.11px'],
+						'50-54': ['50px', '54.4px'],
+						'55-59': ['55px', '59.84px']
+					},
+					colors: {
+						'terracota': '#64221D',
+						'mostarda': '#F7AE1A',
+						'preto-medio': '#292625',
+						'marron-escuro': '#3B2416',
+						'marrom-nude': '#C7794A',
+						'marron-claro': '#A97744',
+						'nude': '#F5E7DA',
+						'cinza-claro': '#F1F0EA',
+						'cinza': '#E7E1DF',
+						'marrom-white': '#CF9A5A'
+
+					}
+				}
+			}
+		}
+	</script>
+	<link rel="stylesheet" href="css/index.css">
 </head>
-<body>
-    <section id="depoimentos" class="px-4 md:px-0 py-[60px] md:py-[130px] relative">
-        <h6 class="text-center text-marron-escuro text-[12px] md:text-[18px]">Depoimentos</h6>
-        <h2 class="text-center text-marron-claro text-[24px] md:text-[50px] font-bold">Tudo sobre Tiamate Coffee
-        </h2>
-      
-        <div class="overflow-y-hidden mt-[26px] relative md:absolute bottom-[16px] md:bottom-[-160px] right-0 md:w-2/4 md:overflow-hidden">
-            <ul  class="flex w-[calc(calc(100%_*_5)_+_calc(16px_*_4))] md:w-[1500px] gap-4 md:gap-[40px] relative duration-200 left-0">
-                <li class="w-1/3 md:w-[200px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
-                    <img src="img/Bebidas_1index.png" alt="">
-                </li>
-                <li class="w-1/3 md:w-[200px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
-                    
-                </li>
-                <li class="w-1/3 md:w-[200px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
-                    
-                </li>
-                <li class="w-1/3 md:w-[200px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px] relative">
-                   
-                </li>
-                <li class="w-1/3 md:w-[200px] bg-cinza rounded-[7px] px-[35px] pt-[58px] md:pt-[30px] pb-[32px]">
-                    
-                </li>
-            </ul>
-        </div>
-        <div class="controles hidden absolute right-[60px] md:flex gap-4">
-            <div id="prev" class="w-[45px] h-[45px] bg-marron-claro hover:bg-marron-escuro duration-200 rounded-full flex items-center justify-center relative rotate-180 cursor-pointer">
-                <div class="w-[12px] h-[2px] bg-white"></div>
-                <div class="w-[8px] h-[8px] border-r-2 border-r-white border-b-2 border-b-white -rotate-45 absolute top-[(50%_-_8px)] left-[(50%_-_2px)]"></div>
-            </div>
-            <div id="next" class="w-[45px] h-[45px] bg-marron-claro hover:bg-marron-escuro duration-200 rounded-full flex items-center justify-center relative cursor-pointer">
-                <div class="w-[12px] h-[2px] bg-white"></div>
-                <div class="w-[8px] h-[8px] border-r-2 border-r-white border-b-2 border-b-white -rotate-45 absolute top-[(50%_-_8px)] left-[(50%_-_2px)]"></div>
-            </div>
-        </div>
-    </section>
 
-    <section id="quem-somos" class="flex justify-between items-center  pt-[81px] pb-[100px] px-8 sm:px-[100px] md:px-[135px]">
-        <div class="">
-            <h4 class="pb-[14px] text-[12px] md:text-[18px] leading-[19.58px] text-marron-escuro ">Para os amantes de café</h4>
-            <h2 class="pb-[34px] font-bold text-[44px] md:text-[50px] leading-[54.4px] text-marron-claro">Quem somos</h2>
-            <h5 class="pb-[47px] text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Com um modelo de negocio sólido e rentavel, a Tiamate se destaca entre<br>as melhores oportunidades de franquia pelas 4 razões que seguem:</h5>
-            <div class="carousel">
-                <div class="carousel-item flex gap-[8px] items-center">
-                    <img src="img.noticias/primeira.png" alt="coffee" class="w-[70px] h-[70px] md:w-auto md:h-auto">
-                    <h5 class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Universidade corporativa que auxilia na capacitação <br>operacional e desenvolvimento de habilidades gerenciais
-                    </h5>
-                </div>
-                <div class="carousel-item flex gap-[8px] items-center">
-                    <img src="img.noticias/segunda.png" alt="coffee" class="w-[70px] h-[70px] md:w-auto md:h-auto">
-                    <h5 class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Modelo inovador e
-                        produtos patenteados
-                    </h5>
-                </div>
-                <div class="carousel-item  flex gap-[8px] items-center">
-                    <img src="img.noticias/terceira.png" alt="coffee" class="w-[70px] h-[70px] md:w-auto md:h-auto">
-                    <h5 class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Ampla oferta de produtos,
-                        seja bebidas ou comidas
-                    </h5>
-                </div>
-                <div class="carousel-item hidden flex gap-[8px] items-center">
-                    <img src="img.noticias/quarta.png" alt="coffee" class="w-[70px] h-[70px] md:w-auto md:h-auto">
-                    <h5 class="text-[10px] md:text-[16px] leading-[19.2px] text-marron-escuro ">Equipe de consultores
-                        altamente especializada
-                    </h5>
-                </div>
-            </div>
-            <div class="flex gap-[22px] pt-[20px] md:pt-[60px]">
-                <i id="btn-prev" class='bx bxs-left-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer hover:scale-110' ></i>
-                <i id="btn-next" class='bx bxs-right-arrow-circle text-[24px] md:text-[30px] text-marron-escuro hover:text-marron-claro hover:cursor-pointer hover:scale-110 ' ></i>
-            </div>    
-        </div>
-        <div>
-            <img src="img/Rectangle 33.png" alt="tiamate coffee" class="hidden lg:block">
-        </div>
-    </section>
-    <section class="pb-24 px-24">
-        <div  class="w-[602px] h-[300px] bg-red-400 relative overflow-x-hidden relative ">
-            <div id="carrossel" class="flex gap-4 absolute ">
-                <div class="w-[190px] h-[278px] bg-blue-500"></div>
-                <div class="w-[190px] h-[278px] bg-blue-500"></div>
-                <div class="w-[190px] h-[278px] bg-blue-500"></div>
-                <div class="w-[190px] h-[278px] bg-red-500"></div>
-                <div class="w-[190px] h-[278px] bg-blue-500"></div>
-                <div class="w-[190px] h-[278px] bg-blue-500"></div>
-                <div class="w-[190px] h-[278px] bg-blue-500"></div>
-                <div class="w-[190px] h-[278px] bg-blue-500"></div>
-                <div class="w-[190px] h-[278px] bg-blue-500"></div>
-                <div class="w-[190px] h-[278px] bg-blue-500"></div>
-            </div>
-        </div>
-    </section>
-    <script>
-        const prevButton = document.getElementById('btn-prev');
-        const nextButton = document.getElementById('btn-next');
-        const carouselItems = document.querySelectorAll('.carousel-item');
-        let currentItem = 0;
+<body class="h-dvh">
+	<header class="fixed w-full  top-0 z-10 shadow-none">
+		<nav class="nav-bar">
+			<div class="logo">
+				<img src="img.logo/LogotiaHorizontal.png" alt="">
+			</div>
+			<div class="nav-list">
+				<ul>
+					<li class="nav-item"><a href="index.html" class="nav-link-selecionado">Início</a></li>
+					<li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+					<li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+					<li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+					<li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+				</ul>
+			</div>
+			<div class="login-button">
+				<button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
+			</div>
 
-        function showItem(index) {
-        carouselItems.forEach((item, i) => {
-        item.classList.add('hidden');
-        if (i === index) {
-      item.classList.remove('hidden');
+			<div class="mobile-menu-icon">
+				<button onclick="menuShow()"><img class="icon" src="img/img/menu_white_36dp.svg" alt=""></button>
+			</div>
+		</nav>
+		<div class="mobile-menu">
+			<ul>
+				<li class="nav-item"><a href="index.html" class="nav-link-selecionado">Início</a></li>
+				<li class="nav-item"><a href="nosso-cafe.html" class="nav-link">Nosso Café</li>
+				<li class="nav-item"><a href="noticias.html" class="nav-link">Notícias</a></li>
+				<li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+				<li class="nav-item"><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+			</ul>
+
+			<div class="login-button">
+				<button><a href="#cadastro-franquiado">Seja um Franqueado</a></button>
+			</div>
+		</div>
+	</header>
+	<script>
+        function menuShow() {
+            let menuMobile = document.querySelector('.mobile-menu');
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open');
+                document.querySelector('.icon').src = "img/img/menu_white_36dp.svg";
+            } else {
+                menuMobile.classList.add('open');
+                document.querySelector('.icon').src = "img/img/close_white_36dp.svg";
+            }
         }
-        });
-        }
-
-        nextButton.addEventListener('click', () => {
-        currentItem = (currentItem + 1) % carouselItems.length;
-        showItem(currentItem);
-        });
-
-        prevButton.addEventListener('click', () => {
-        currentItem = (currentItem - 1 + carouselItems.length) % carouselItems.length;
-        showItem(currentItem);
-        });
-
-        // Mostrar o primeiro item por padrão
-        showItem(0);
     </script>
+
+	<main class="">
+		<section id="banners"  >
+			<div class="relative top-[90px]">
+                <img src="img/Banner_01index.png" alt="" class="w-full">
+                <div class="absolute top-[13%] left-[10%] ">
+                    <h1 class="text-[4vw] text-mostarda font-bold">Um café quentinho</h1>
+                    <h1 class="text-[4vw] text-nude font-bold">aqui na Tiamate <br />muda o
+                        dia.</h1>
+                </div>
+                <div class="flex absolute top-[66%] left-[10%] gap-[1.5vw]">
+                    <a href=""><img src="img.logo/Group.png" alt="" class="w-[3vw] h-[3vw]"></a>
+                    <a href=""><img src="img.logo/Vector.png" alt="" class="w-[3vw] h-[3vw]"></a>
+                    <a href=""><img src="img.logo/youtube.png" alt="" class="w-[3vw] h-[3vw]"></a>
+                    <a href=""><img src="img.logo/linkedin.png" alt="" class="w-[3vw] h-[3vw]"></a>
+                </div>
+            </div>
+           
+		</section>
+		
+		<section id="bem-vindo">
+			
+
+		</section>
+		<section id="valores" >
+			
+		</section>
+		<section id="video-cafe" >
+			
+		</section>
+
+		<section id="banner-secundario" >
+			
+		</section>
+
+		<section id="galeria" >
+			
+		</section>
+
+		
+		<section id="cardapio-carrossel2" >
+			
+		</section>
+		
+
+		<section id="cadastro-franquiado">
+            
+        </section>
+			
+		
+		
+
+		<section id="depoimentos" >
+            
+		
+		</section>
+
+		
+	</main>
+	<!-- footer -->
+	<footer>
+       
+    </footer>
 </body>
 
-<script>
 
-let c_click = 0;
-const totalSlides = 5; // Substitua 5 pelo número total de slides
 
-next.onclick = () => {
-    c_click = (c_click + 1) % totalSlides; // Incrementa c_click e aplica o módulo para manter dentro do limite
-    carrossel.style.left = `-${c_click * 206}px`;
-};
-
-prev.onclick = () => {
-    c_click = (c_click - 1 + totalSlides) % totalSlides; // Decrementa c_click e aplica o módulo com ajuste para evitar valores negativos
-    carrossel.style.left = `-${c_click * 206}px`;
-};
-
-</script>
 </html>

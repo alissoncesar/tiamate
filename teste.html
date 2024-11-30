@@ -227,13 +227,13 @@
 		</section>
 
 		
-		<section id="cardapio-carrossel2" class="pt-[93px] bg-cinza" >
+		<section id="cardapio-carrossel2" class="flex flex-col items-center pt-[93px] pb-[150px] bg-cinza" >
 			<div class="flex flex-col gap-3 justify-center items-center">
 				<h5 class="text-[18px] md:text-[12px] leading-[19.58px] md:leading-[13.58px] text-marron-escuro md:pt-[93px]">Confira nosso</h5>
 				<h2 class="font-bold text-[50px] md:text-[44px] leading-[54.4px] md:leading-[48.4px] text-marron-claro">Cardápio</h2>
 			</div>
 			<!-- Carrossel -->
-			<div  class="flex w-[332px] md:w-[602px] h-[300px] overflow-y-hidden relative left-[34px] md:left-[150px] lg:left-[300px]  xl:left-[470px] 2xl:left-[470px] pb-9 pt-9 duration-200 ">
+			<div  class="flex w-[332px] md:w-[602px] h-[300px] overflow-y-hidden md:overflow-x-hidden relative pb-9 pt-9 duration-200 ">
 				<div id="bebidas" class="flex gap-3 md:gap-4 relative ">
 					<div class="imagens-carrosel">
 						<img src="img/bebidas/Bebidas-01.png" alt="">
@@ -272,13 +272,15 @@
 						<img src="img/bebidas/Bebidas-13.png" alt="">
 					</div>
 				</div>
-	
 				<div id="prev" class="hidden md:block absolute left-[5px] bottom-24 cursor-pointer">
 					<i class='bx bx-left-arrow-alt'></i>
 				</div>
 				<div id="next" class="hidden md:block absolute right-[-8px] md:right-[20px] bottom-24 cursor-pointer">
 					<i class='bx bx-right-arrow-alt' ></i>
 				</div>
+			</div>
+			<button class="text-[18px] md:text-[18px] text-marron-escuro font-semibold w-[260px] md:w-[304px] h-[60px] rounded-[5px]  mt-[50px] md:mt-[70px] bg-marrom-white ">Ver mais</button>
+				
 		</section>
 
 		<script>

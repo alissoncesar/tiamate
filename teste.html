@@ -191,7 +191,7 @@
 				Your browser does not support the video tag.
 			</video>
 		</section>
-		<section id="banner-secundario" >
+		<section id="banner-secundario" class="pb-[169px]" >
 			<div class="relative ">
                 <img src="./img/banner_sec - Index.png" alt="" class="w-full ">
                 <div class="absolute top-[13%] left-[10%] ">
@@ -202,13 +202,98 @@
 		</section>
 
 		<section id="galeria" >
-			
+			<div class="flex justify-between items-center px-5 md:px-[173px] md:pb-14">
+				<div class="">
+					<h3 class="text-[12px] md:text-[18px] leading-[19.58px] md:leading-[13.58px] md:pb-[13px]  text-preto-medio">Para você e seus amigos</h3>
+					<h1 class="text-[20px] md:text-[50px] leading-[22.4px] md:leading-[52.4px] font-bold text-marron-claro">Ambiente agradável</h1>
+				</div>
+				<div class="flex justify-end items-center gap-1 md:gap-5">
+					<h5 class="text-[8px] leading-[11px] md:text-[18px] md:leading-[21.6px] text-marron-escuro">Veja mais</h5>
+						<a href="https://www.instagram.com/tiamatefortaleza/" target="_blank"><img src="img.logo/Vector.png" alt="" class="md:w-[50px] md:h-[50px] hover:scale-105"></a>
+				</div>
+			</div>
+			<!-- Galeria de imagens -->
+			<ul class="grid grid-cols-2 md:grid-cols-3  px-5 md:px-[175px] pt-8">
+				<li><img src="img/foto1 index.png" alt="moça curtindo seu café numa mesa"></li>
+				<li><img src="img/foto2 index.png" alt="rapaz de óculos sorrindo "></li>
+				<li><img src="img/foto3 index.png" alt="moça tomando um frapê"></li>
+				<li><img src="img/foto4 index.png" alt="homem numa mesa"></li>
+				<li><img src="img/foto5 index.png" alt="moça com uma pose com um café"></li>
+				<li><img src="img/foto6 index.png" alt="homem feliz tomando café"></li>
+			</ul>
 		</section>
 
 		
-		<section id="cardapio-carrossel2" >
-			
+		<section id="cardapio-carrossel2" class="pt-[246px] bg-cinza  relative top-[-80px] md:top-[-150px]" >
+			<div class="flex flex-col gap-3 justify-center items-center">
+				<h5 class="text-[18px] md:text-[12px] leading-[19.58px] md:leading-[13.58px] text-marron-escuro md:pt-[93px]">Confira nosso</h5>
+				<h2 class="font-bold text-[50px] md:text-[44px] leading-[54.4px] md:leading-[48.4px] text-marron-claro">Cardápio</h2>
+			</div>
+			<!-- Carrossel -->
+			<div  class="flex w-[332px] md:w-[602px] h-[300px] overflow-y-hidden overflow-x-hidden relative md:left-[150px] lg:left-[300px]  xl:left-[470px] 2xl:left-[470px] pb-9 pt-9 duration-200 ">
+				<div id="bebidas" class="flex gap-4 relative ">
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-01.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-02.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-03.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-04.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-05.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-06.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-07.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-09.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-10.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-11.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-12.png" alt="">
+					</div>
+					<div class="imagens-carrosel">
+						<img src="img/bebidas/Bebidas-13.png" alt="">
+					</div>
+				</div>
+	
+				<div id="prev" class="absolute left-[5px] bottom-24 cursor-pointer">
+					<i class='bx bx-left-arrow-alt'></i>
+				</div>
+				<div id="next" class="absolute right-[20px] bottom-24 cursor-pointer">
+					<i class='bx bx-right-arrow-alt' ></i>
+				</div>
 		</section>
+
+		<script>
+
+			let c_click = 0;
+			const totalSlides = 10; // Substitua 5 pelo número total de slides
+			
+			next.onclick = () => {
+				c_click = (c_click + 1) % totalSlides; // Incrementa c_click e aplica o módulo para manter dentro do limite
+				bebidas.style.left = `-${c_click * 116}px`;
+			};
+			
+			prev.onclick = () => {
+				c_click = (c_click - 1 + totalSlides) % totalSlides; // Decrementa c_click e aplica o módulo com ajuste para evitar valores negativos
+				bebidas.style.left = `-${c_click * 116}px`;
+			};
+			
+		</script>
 		
 
 		<section id="cadastro-franquiado">

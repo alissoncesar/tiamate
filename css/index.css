@@ -370,3 +370,17 @@
         line-height: 56px;
     }
 }
+
+#cardapio-carrossel2{
+    & .imagens-carrosel{
+        width: 190px;
+   
+}
+
+@media screen and (max-width: 768px){
+    #cardapio-carrossel2{
+        & .imagens-carrosel{
+            width: 40px;
+        }
+    }
+}
